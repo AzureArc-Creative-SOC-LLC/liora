@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Facility visual">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3a36" />
+      <stop offset="100%" stop-color="#1e1e1c" />
+    </linearGradient>
+    <radialGradient id="glow" cx="32%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#ffeec8" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#ffeec8" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grain" width="3" height="3" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.6" fill="#ffeec8" fill-opacity="0.05" />
+    </pattern>
+    <linearGradient id="liquid1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffeec8" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#9c7f4a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="liquid2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffeec8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#a78953" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="750" fill="url(#bg)" />
+  <ellipse cx="200" cy="280" rx="320" ry="320" fill="url(#glow)" />
+  <rect width="600" height="750" fill="url(#grain)" />
+
+  <!-- bench surface -->
+  <rect x="40" y="600" width="520" height="2" fill="#ffeec8" fill-opacity="0.4" />
+  <rect x="40" y="602" width="520" height="60" fill="#ffeec8" fill-opacity="0.04" />
+
+  <!-- vial A -->
+  <g>
+    <rect x="180" y="380" width="80" height="220" rx="8" fill="#3a3a36" stroke="#ffeec8" stroke-opacity="0.5" />
+    <rect x="180" y="470" width="80" height="130" fill="url(#liquid1)" />
+    <rect x="180" y="380" width="80" height="220" rx="8" fill="none" stroke="#ffeec8" stroke-opacity="0.3" />
+    <rect x="175" y="360" width="90" height="22" rx="3" fill="#1e1e1c" stroke="#ffeec8" stroke-opacity="0.4" />
+    <rect x="190" y="355" width="60" height="6" fill="#ffeec8" fill-opacity="0.7" />
+    <!-- label -->
+    <rect x="190" y="500" width="60" height="36" fill="#1e1e1c" fill-opacity="0.6" stroke="#ffeec8" stroke-opacity="0.3" />
+    <text x="220" y="516" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8" fill="#ffeec8" letter-spacing="1.5">SAMPLE</text>
+    <text x="220" y="528" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8" fill="#ffeec8" fill-opacity="0.6" letter-spacing="1.5">01-A</text>
+  </g>
+
+  <!-- vial B -->
+  <g>
+    <rect x="320" y="340" width="80" height="260" rx="8" fill="#3a3a36" stroke="#ffeec8" stroke-opacity="0.5" />
+    <rect x="320" y="450" width="80" height="150" fill="url(#liquid2)" />
+    <rect x="320" y="340" width="80" height="260" rx="8" fill="none" stroke="#ffeec8" stroke-opacity="0.3" />
+    <rect x="315" y="320" width="90" height="22" rx="3" fill="#1e1e1c" stroke="#ffeec8" stroke-opacity="0.4" />
+    <rect x="330" y="315" width="60" height="6" fill="#ffeec8" fill-opacity="0.7" />
+    <rect x="330" y="480" width="60" height="36" fill="#1e1e1c" fill-opacity="0.6" stroke="#ffeec8" stroke-opacity="0.3" />
+    <text x="360" y="496" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8" fill="#ffeec8" letter-spacing="1.5">SAMPLE</text>
+    <text x="360" y="508" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8" fill="#ffeec8" fill-opacity="0.6" letter-spacing="1.5">02-B</text>
+  </g>
+
+  <!-- floating dot grid in background -->
+  <g fill="#ffeec8" fill-opacity="0.18">
+    <circle cx="80"  cy="120" r="1.5" />
+    <circle cx="120" cy="120" r="1.5" />
+    <circle cx="160" cy="120" r="1.5" />
+    <circle cx="80"  cy="160" r="1.5" />
+    <circle cx="120" cy="160" r="1.5" />
+    <circle cx="80"  cy="200" r="1.5" />
+    <circle cx="480" cy="180" r="1.5" />
+    <circle cx="520" cy="180" r="1.5" />
+    <circle cx="480" cy="220" r="1.5" />
+  </g>
+
+  <!-- meta -->
+  <text x="40" y="64" font-family="ui-monospace, monospace" font-size="11" fill="#ffeec8" fill-opacity="0.8" letter-spacing="3">FACILITY · LAB BAY 03</text>
+  <text x="40" y="80" font-family="ui-monospace, monospace" font-size="10" fill="#ffeec8" fill-opacity="0.5" letter-spacing="3">REF 24-04-001</text>
+  <text x="40" y="710" font-family="ui-monospace, monospace" font-size="10" fill="#ffeec8" fill-opacity="0.5" letter-spacing="3">DUBAI · 25.2°C · 32% RH</text>
+</svg>

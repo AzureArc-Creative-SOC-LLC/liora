@@ -1,0 +1,520 @@
+- generic [ref=e2]:
+  - banner [ref=e510]:
+    - generic [ref=e511]:
+      - link "Liora Healthcare" [ref=e512]:
+        - /url: "#home"
+        - img [ref=e514]
+        - generic [ref=e520]:
+          - generic [ref=e521]: Liora
+          - generic [ref=e523]: Healthcare
+      - navigation [ref=e524]:
+        - list [ref=e525]:
+          - listitem [ref=e526]:
+            - link "Home" [ref=e527]:
+              - /url: "#home"
+          - listitem [ref=e528]:
+            - link "About" [ref=e529]:
+              - /url: "#about"
+          - listitem [ref=e530]:
+            - link "Products" [ref=e531]:
+              - /url: "#work"
+          - listitem [ref=e532]:
+            - link "Why Us" [ref=e533]:
+              - /url: "#why-us"
+          - listitem [ref=e534]:
+            - link "FAQ" [ref=e535]:
+              - /url: "#faq"
+          - listitem [ref=e536]:
+            - link "Contact" [ref=e537]:
+              - /url: "#contact"
+      - generic [ref=e538]:
+        - button "Open cart, 0 items" [ref=e539]:
+          - img [ref=e540]
+        - link "WhatsApp" [ref=e544]:
+          - /url: https://wa.me/971500000000
+          - text: WhatsApp
+  - main [ref=e546]:
+    - generic [ref=e547]:
+      - generic [ref=e548]:
+        - generic [ref=e549]: Dubai · United Arab Emirates
+        - generic [ref=e550]: Liora Healthcare · Est. 2026
+      - generic [ref=e551]:
+        - generic [ref=e552]:
+          - heading "Purity First." [level=1] [ref=e553]:
+            - generic "Purity" [ref=e554]:
+              - generic [ref=e556]:
+                - generic [ref=e557]: P
+                - generic [ref=e558]: u
+                - generic [ref=e559]: r
+                - generic [ref=e560]: i
+                - generic [ref=e561]: t
+                - generic [ref=e562]: "y"
+            - generic "First." [ref=e563]:
+              - generic [ref=e565]:
+                - generic [ref=e566]: F
+                - generic [ref=e567]: i
+                - generic [ref=e568]: r
+                - generic [ref=e569]: s
+                - generic [ref=e570]: t
+                - generic [ref=e571]: .
+          - paragraph [ref=e572]: Research-grade peptide and supplement formulations — sourced from verified suppliers and carefully packed to ensure consistency, purity, and reliability.
+          - generic [ref=e573]:
+            - link "Scroll" [ref=e574]:
+              - /url: "#about"
+              - generic [ref=e575]: Scroll
+            - generic [ref=e577]:
+              - generic [ref=e578]: Research-grade peptide supply
+              - generic [ref=e579]: Now shipping across the UAE & GCC
+        - figure [ref=e580]:
+          - img "Liora Healthcare hero" [ref=e582]
+          - generic [ref=e583]: Verified supply
+          - generic [ref=e584]: Sealed & tested
+    - generic [ref=e585]:
+      - generic [ref=e586]:
+        - figure [ref=e587]:
+          - generic [ref=e588]:
+            - img "Liora Healthcare laboratory" [ref=e589]
+            - generic [ref=e591]: LH
+            - generic [ref=e592]: © 2026 · Liora Healthcare
+            - generic [ref=e593]: Dubai · United Arab Emirates
+            - generic [ref=e594]: Facility · No. 01
+        - generic [ref=e595]:
+          - generic [ref=e596]: About
+          - heading "Advancing modern research with smarter formulations." [level=2] [ref=e597]:
+            - generic [ref=e598]:
+              - generic [ref=e599]:
+                - generic [ref=e600]: A
+                - generic [ref=e601]: d
+                - generic [ref=e602]: v
+                - generic [ref=e603]: a
+                - generic [ref=e604]: "n"
+                - generic [ref=e605]: c
+                - generic [ref=e606]: i
+                - generic [ref=e607]: "n"
+                - generic [ref=e608]: g
+              - generic [ref=e609]:
+                - generic [ref=e610]: m
+                - generic [ref=e611]: o
+                - generic [ref=e612]: d
+                - generic [ref=e613]: e
+                - generic [ref=e614]: r
+                - generic [ref=e615]: "n"
+              - generic [ref=e616]:
+                - generic [ref=e617]: r
+                - generic [ref=e618]: e
+                - generic [ref=e619]: s
+                - generic [ref=e620]: e
+                - generic [ref=e621]: a
+                - generic [ref=e622]: r
+                - generic [ref=e623]: c
+                - generic [ref=e624]: h
+              - generic [ref=e625]:
+                - generic [ref=e626]: w
+                - generic [ref=e627]: i
+                - generic [ref=e628]: t
+                - generic [ref=e629]: h
+              - generic [ref=e630]:
+                - generic [ref=e631]: s
+                - generic [ref=e632]: m
+                - generic [ref=e633]: a
+                - generic [ref=e634]: r
+                - generic [ref=e635]: t
+                - generic [ref=e636]: e
+                - generic [ref=e637]: r
+              - generic [ref=e638]:
+                - generic [ref=e639]: f
+                - generic [ref=e640]: o
+                - generic [ref=e641]: r
+                - generic [ref=e642]: m
+                - generic [ref=e643]: u
+                - generic [ref=e644]: l
+                - generic [ref=e645]: a
+                - generic [ref=e646]: t
+                - generic [ref=e647]: i
+                - generic [ref=e648]: o
+                - generic [ref=e649]: "n"
+                - generic [ref=e650]: s
+                - generic [ref=e651]: .
+          - paragraph [ref=e652]: We're committed to advancing high-quality peptide and supplement research through clean, reliable, and precisely developed formulations. Every product is sourced from verified suppliers and carefully packed to preserve consistency, purity, and integrity — from our facility to your bench.
+          - list [ref=e653]:
+            - listitem [ref=e654]:
+              - generic [ref=e655]: Range
+              - generic [ref=e656]: Peptides · Supplements
+            - listitem [ref=e657]:
+              - generic [ref=e658]: Sourcing
+              - generic [ref=e659]: Verified suppliers
+            - listitem [ref=e660]:
+              - generic [ref=e661]: Support
+              - generic [ref=e662]: Fast WhatsApp
+      - generic [ref=e663]:
+        - generic [ref=e664]:
+          - generic [ref=e665]:
+            - generic [ref=e666]: "0"
+            - generic [ref=e667]: "%+"
+          - generic [ref=e668]: Formulation purity
+        - generic [ref=e669]:
+          - generic [ref=e670]:
+            - generic [ref=e671]: "0"
+            - generic [ref=e672]: +
+          - generic [ref=e673]: Researchers served
+        - generic [ref=e674]:
+          - generic [ref=e675]:
+            - generic [ref=e676]: "0"
+            - generic [ref=e677]: h
+          - generic [ref=e678]: WhatsApp response
+    - generic [ref=e679]:
+      - generic [ref=e680]:
+        - generic [ref=e681]:
+          - generic [ref=e682]: Standards
+          - heading "Quality is the work." [level=2] [ref=e683]
+        - paragraph [ref=e684]: Four standards we hold ourselves to on every order — the same whether you're a postdoc reordering a single vial or a lab provisioning a year of research.
+      - generic [ref=e685]:
+        - article [ref=e686]:
+          - generic [ref=e691]: "01"
+          - heading "Purity First" [level=3] [ref=e692]
+          - paragraph [ref=e693]: Each product is checked thoroughly to maintain clean, high-quality formulations you can rely on.
+        - article [ref=e694]:
+          - generic [ref=e699]: "02"
+          - heading "Reliable Consistency" [level=3] [ref=e700]
+          - paragraph [ref=e701]: Controlled processes ensure every unit is produced to uniform, repeatable standards.
+        - article [ref=e702]:
+          - generic [ref=e707]: "03"
+          - heading "Secure Packaging" [level=3] [ref=e708]
+          - paragraph [ref=e709]: Every product is sealed and protected to preserve freshness, stability, and overall product integrity.
+        - article [ref=e710]:
+          - generic [ref=e715]: "04"
+          - heading "Quick WhatsApp Support" [level=3] [ref=e716]
+          - paragraph [ref=e717]: Fast WhatsApp assistance for queries, updates, and product guidance — message us any time.
+    - generic [ref=e719]:
+      - generic [ref=e720]:
+        - generic [ref=e721]:
+          - generic [ref=e722]: Catalogue
+          - heading "Available products." [level=2] [ref=e723]
+        - paragraph [ref=e724]: Research-grade peptides and supplement formulations. Documentation and batch data available on request.
+      - generic [ref=e726]:
+        - article [ref=e727]:
+          - generic [ref=e728]:
+            - img "Retatrutide 20mg" [ref=e730]
+            - generic [ref=e731]: 01 / 05
+          - generic [ref=e732]:
+            - generic [ref=e733]:
+              - generic [ref=e734]: Metabolic research
+              - generic [ref=e735]: AED 1,290
+            - heading "Retatrutide 20mg" [level=3] [ref=e736]
+            - paragraph [ref=e737]: Triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as 20 mg (4 × 5 mg doses) for metabolic and energy-pathway research.
+            - generic [ref=e738]:
+              - link "Order now →" [ref=e739]:
+                - /url: "#/product/p1"
+              - button "Add Retatrutide 20mg to cart" [ref=e740]:
+                - generic [ref=e741]: +
+        - article [ref=e742]:
+          - generic [ref=e743]:
+            - img "Glow GHK-Cu" [ref=e745]
+            - generic [ref=e746]: 02 / 05
+          - generic [ref=e747]:
+            - generic [ref=e748]:
+              - generic [ref=e749]: Recovery & cosmetic
+              - generic [ref=e750]: AED 1,199
+            - heading "Glow GHK-Cu" [level=3] [ref=e751]
+            - paragraph [ref=e752]: Skin, hair and cellular-repair blend pairing BPC-157, TB500 and GHK-Cu. Studied in regeneration and tissue-repair research.
+            - generic [ref=e753]:
+              - link "Order now →" [ref=e754]:
+                - /url: "#/product/p2"
+              - button "Add Glow GHK-Cu to cart" [ref=e755]:
+                - generic [ref=e756]: +
+        - article [ref=e757]:
+          - generic [ref=e758]:
+            - img "BPC-157 & TB-500" [ref=e760]
+            - generic [ref=e761]: 03 / 05
+          - generic [ref=e762]:
+            - generic [ref=e763]:
+              - generic [ref=e764]: Recovery research
+              - generic [ref=e765]: AED 999
+            - heading "BPC-157 & TB-500" [level=3] [ref=e766]
+            - paragraph [ref=e767]: Recovery and repair pairing supplied at 40 mg (4 × 10 mg doses). Widely used in tissue-regeneration assays.
+            - generic [ref=e768]:
+              - link "Order now →" [ref=e769]:
+                - /url: "#/product/p3"
+              - button "Add BPC-157 & TB-500 to cart" [ref=e770]:
+                - generic [ref=e771]: +
+        - article [ref=e772]:
+          - generic [ref=e773]:
+            - img "Tirzepatide 40mg" [ref=e775]
+            - generic [ref=e776]: 04 / 05
+          - generic [ref=e777]:
+            - generic [ref=e778]:
+              - generic [ref=e779]: Metabolic research
+              - generic [ref=e780]: AED 1,490
+            - heading "Tirzepatide 40mg" [level=3] [ref=e781]
+            - paragraph [ref=e782]: Dual agonist of GLP-1 and GIP receptors. Supplied as 40 mg (4 × 10 mg doses) for glucose-regulation and metabolic studies.
+            - generic [ref=e783]:
+              - link "Order now →" [ref=e784]:
+                - /url: "#/product/p4"
+              - button "Add Tirzepatide 40mg to cart" [ref=e785]:
+                - generic [ref=e786]: +
+        - article [ref=e787]:
+          - generic [ref=e788]:
+            - img "NAD+ 1000mg" [ref=e790]
+            - generic [ref=e791]: 05 / 05
+          - generic [ref=e792]:
+            - generic [ref=e793]:
+              - generic [ref=e794]: Cellular research
+              - generic [ref=e795]: AED 899
+            - heading "NAD+ 1000mg" [level=3] [ref=e796]
+            - paragraph [ref=e797]: Focus, brain cellular-repair and anti-aging research compound supplied at 1,000 mg for cellular-metabolism investigations.
+            - generic [ref=e798]:
+              - link "Order now →" [ref=e799]:
+                - /url: "#/product/p5"
+              - button "Add NAD+ 1000mg to cart" [ref=e800]:
+                - generic [ref=e801]: +
+    - generic [ref=e802]:
+      - generic [ref=e803]:
+        - generic [ref=e804]:
+          - generic [ref=e805]: Why us
+          - generic [ref=e806]: 01 / 04
+        - heading "Why labs choose us." [level=2] [ref=e807]:
+          - generic [ref=e808]:
+            - generic [ref=e809]:
+              - generic [ref=e810]: W
+              - generic [ref=e811]: h
+              - generic [ref=e812]: "y"
+            - generic [ref=e813]:
+              - generic [ref=e814]: l
+              - generic [ref=e815]: a
+              - generic [ref=e816]: b
+              - generic [ref=e817]: s
+            - generic [ref=e818]:
+              - generic [ref=e819]: c
+              - generic [ref=e820]: h
+              - generic [ref=e821]: o
+              - generic [ref=e822]: o
+              - generic [ref=e823]: s
+              - generic [ref=e824]: e
+            - generic [ref=e825]:
+              - generic [ref=e826]: u
+              - generic [ref=e827]: s
+              - generic [ref=e828]: .
+        - paragraph [ref=e829]: Hover a tile to expand it. Four commitments we hold to on every order, regardless of size or destination.
+      - generic [ref=e830]:
+        - article [ref=e831]:
+          - img
+          - generic:
+            - generic: "01"
+            - generic: Consistent results
+          - generic [ref=e832]:
+            - generic [ref=e833]: "01"
+            - heading "Consistent results" [level=3] [ref=e834]
+            - paragraph [ref=e835]: Sourced from manufacturers that follow strict testing, handling, and documentation standards on every product.
+            - generic [ref=e837]:
+              - generic [ref=e838]: Promise
+              - generic [ref=e839]: ↗
+        - article [ref=e840]:
+          - img
+          - generic [ref=e841]:
+            - generic [ref=e842]: "02"
+            - generic [ref=e843]: Verified purity
+          - generic:
+            - generic: "02"
+            - heading "Verified purity" [level=3]
+            - paragraph: Every product undergoes thorough checking to maintain clean, high-quality formulations you can rely on.
+            - generic:
+              - generic: Promise
+              - generic: ↗
+        - article [ref=e844]:
+          - img
+          - generic [ref=e845]:
+            - generic [ref=e846]: "03"
+            - generic [ref=e847]: Reliable service
+          - generic:
+            - generic: "03"
+            - heading "Reliable service" [level=3]
+            - paragraph: Every step — from order to delivery — is designed to provide a smooth, dependable customer experience.
+            - generic:
+              - generic: Promise
+              - generic: ↗
+        - article [ref=e848]:
+          - img
+          - generic [ref=e849]:
+            - generic [ref=e850]: "04"
+            - generic [ref=e851]: Quick support
+          - generic:
+            - generic: "04"
+            - heading "Quick support" [level=3]
+            - paragraph: Fast WhatsApp assistance for queries, updates, and product guidance, whenever you need it.
+            - generic:
+              - generic: Promise
+              - generic: ↗
+      - generic [ref=e852]:
+        - button "Show reason 1" [ref=e853]
+        - button "Show reason 2" [ref=e854]
+        - button "Show reason 3" [ref=e855]
+        - button "Show reason 4" [ref=e856]
+    - generic [ref=e857]:
+      - generic [ref=e858]:
+        - generic [ref=e859]:
+          - generic [ref=e860]: Reviews
+          - heading "From researchers we ship to." [level=2] [ref=e861]
+        - paragraph [ref=e862]: Unedited words from 6+ labs and independent researchers we've supplied across the GCC and beyond.
+      - generic [ref=e863]:
+        - article [ref=e864]:
+          - paragraph [ref=e865]: "\"Fast support, reliable products, and a smooth ordering experience. The team truly delivers dependable quality every time.\""
+          - generic [ref=e867]:
+            - generic [ref=e868]: Emily Carter
+            - generic [ref=e869]: Wellness Consultant
+        - article [ref=e870]:
+          - paragraph [ref=e871]: "\"Everything arrived securely, communication was excellent, and the overall service exceeded expectations for a premium brand.\""
+          - generic [ref=e873]:
+            - generic [ref=e874]: Sofia Bennett
+            - generic [ref=e875]: Fitness Coordinator
+        - article [ref=e876]:
+          - paragraph [ref=e877]: "\"Product consistency, helpful guidance, and quick responses made the entire process simple, smooth, and extremely satisfying.\""
+          - generic [ref=e879]:
+            - generic [ref=e880]: Michael Reed
+            - generic [ref=e881]: Research Assistant
+        - article [ref=e882]:
+          - paragraph [ref=e883]: "\"Support actually answered questions about handling and storage. Most suppliers send a generic FAQ link and disappear.\""
+          - generic [ref=e885]:
+            - generic [ref=e886]: Marco Ruiz
+            - generic [ref=e887]: Procurement Lead, Vela Biotech
+        - article [ref=e888]:
+          - paragraph [ref=e889]: "\"Pricing is fair, freight is quick, and the certificate of analysis is more detailed than what we used to get from larger suppliers.\""
+          - generic [ref=e891]:
+            - generic [ref=e892]: Sasha Petrov
+            - generic [ref=e893]: Postdoctoral Researcher
+        - article [ref=e894]:
+          - paragraph [ref=e895]: "\"WhatsApp reply within the hour. That alone changed how we plan ordering for our team.\""
+          - generic [ref=e897]:
+            - generic [ref=e898]: Priya Natarajan
+            - generic [ref=e899]: Co-founder, Ember Research
+        - article [ref=e900]:
+          - paragraph [ref=e901]: "\"Fast support, reliable products, and a smooth ordering experience. The team truly delivers dependable quality every time.\""
+          - generic [ref=e903]:
+            - generic [ref=e904]: Emily Carter
+            - generic [ref=e905]: Wellness Consultant
+        - article [ref=e906]:
+          - paragraph [ref=e907]: "\"Everything arrived securely, communication was excellent, and the overall service exceeded expectations for a premium brand.\""
+          - generic [ref=e909]:
+            - generic [ref=e910]: Sofia Bennett
+            - generic [ref=e911]: Fitness Coordinator
+        - article [ref=e912]:
+          - paragraph [ref=e913]: "\"Product consistency, helpful guidance, and quick responses made the entire process simple, smooth, and extremely satisfying.\""
+          - generic [ref=e915]:
+            - generic [ref=e916]: Michael Reed
+            - generic [ref=e917]: Research Assistant
+        - article [ref=e918]:
+          - paragraph [ref=e919]: "\"Support actually answered questions about handling and storage. Most suppliers send a generic FAQ link and disappear.\""
+          - generic [ref=e921]:
+            - generic [ref=e922]: Marco Ruiz
+            - generic [ref=e923]: Procurement Lead, Vela Biotech
+        - article [ref=e924]:
+          - paragraph [ref=e925]: "\"Pricing is fair, freight is quick, and the certificate of analysis is more detailed than what we used to get from larger suppliers.\""
+          - generic [ref=e927]:
+            - generic [ref=e928]: Sasha Petrov
+            - generic [ref=e929]: Postdoctoral Researcher
+        - article [ref=e930]:
+          - paragraph [ref=e931]: "\"WhatsApp reply within the hour. That alone changed how we plan ordering for our team.\""
+          - generic [ref=e933]:
+            - generic [ref=e934]: Priya Natarajan
+            - generic [ref=e935]: Co-founder, Ember Research
+    - generic [ref=e936]:
+      - generic [ref=e937]:
+        - generic [ref=e938]: FAQ
+        - heading "Frequently asked questions." [level=2] [ref=e939]
+      - generic [ref=e940]:
+        - figure [ref=e941]:
+          - img "Research team in the lab" [ref=e942]
+        - generic [ref=e943]:
+          - generic [ref=e944]:
+            - button "What documentation comes with each order?" [expanded] [ref=e945] [cursor=pointer]:
+              - generic [ref=e946]: What documentation comes with each order?
+              - img [ref=e948]
+            - paragraph [ref=e952]: Every vial ships with a certificate of analysis listing lot number, synthesis date, HPLC purity, and mass-spec confirmation. Storage and handling notes are included on the packing slip.
+          - generic [ref=e953]:
+            - button "How is purity verified?" [ref=e954] [cursor=pointer]:
+              - generic [ref=e955]: How is purity verified?
+              - img [ref=e957]
+            - paragraph [ref=e959]: Each batch is independently tested by reverse-phase HPLC and high-resolution mass spectrometry. We retain a reference sample from every lot for cross-verification on request.
+          - generic [ref=e960]:
+            - button "How are shipments packaged?" [ref=e961] [cursor=pointer]:
+              - generic [ref=e962]: How are shipments packaged?
+              - img [ref=e964]
+            - paragraph [ref=e966]: Vials ship in insulated double-walled mailers with phase-change gel packs sized for the destination's transit window. Temperature loggers are included on orders above a set threshold or on request.
+          - generic [ref=e967]:
+            - button "Do you ship outside the UAE?" [ref=e968] [cursor=pointer]:
+              - generic [ref=e969]: Do you ship outside the UAE?
+              - img [ref=e971]
+            - paragraph [ref=e973]: Yes — we currently dispatch across the GCC and to select international research addresses. Some destinations require additional import documentation; we'll confirm what's needed before processing.
+          - generic [ref=e974]:
+            - button "How long does delivery take?" [ref=e975] [cursor=pointer]:
+              - generic [ref=e976]: How long does delivery take?
+              - img [ref=e978]
+            - paragraph [ref=e980]: UAE orders typically arrive within 24–48 hours of despatch. GCC orders arrive in 2–4 working days. International shipments depend on customs clearance at the destination.
+          - generic [ref=e981]:
+            - button "What's the return policy?" [ref=e982] [cursor=pointer]:
+              - generic [ref=e983]: What's the return policy?
+              - img [ref=e985]
+            - paragraph [ref=e987]: We don't accept returns on opened or temperature-compromised vials. If a shipment arrives damaged or out of spec, contact us within 48 hours of delivery and we'll replace or refund.
+          - generic [ref=e988]:
+            - button "How can I pay?" [ref=e989] [cursor=pointer]:
+              - generic [ref=e990]: How can I pay?
+              - img [ref=e992]
+            - paragraph [ref=e994]: Bank transfer, card payments via our checkout, and crypto on request. Institutional purchase orders are accepted with prior credit approval.
+    - generic [ref=e996]:
+      - generic [ref=e997]:
+        - generic [ref=e998]: Contact
+        - heading "Place an order or ask a question." [level=2] [ref=e999]
+        - paragraph [ref=e1000]: Tell us what you need — a single vial, a recurring lab supply, or a quote for a custom catalogue. We reply by email or WhatsApp within a working day.
+        - list [ref=e1001]:
+          - listitem [ref=e1002]:
+            - generic [ref=e1003]: WhatsApp
+            - link "+971 50 000 0000 ↗" [ref=e1004]:
+              - /url: https://wa.me/971500000000
+          - listitem [ref=e1005]:
+            - generic [ref=e1006]: Email
+            - link "hello@liorahealthcare.com" [ref=e1007]:
+              - /url: mailto:hello@liorahealthcare.com
+          - listitem [ref=e1008]:
+            - generic [ref=e1009]: Facility
+            - generic [ref=e1010]: Dubai · United Arab Emirates
+      - generic [ref=e1011]:
+        - generic [ref=e1012]:
+          - generic [ref=e1013]: Name or organisation
+          - textbox "Name or organisation" [ref=e1014]
+        - generic [ref=e1015]:
+          - generic [ref=e1016]: Email
+          - textbox "Email" [ref=e1017]
+        - generic [ref=e1018]:
+          - generic [ref=e1019]: Order details or question
+          - textbox "Order details or question" [ref=e1020]
+        - button "Send enquiry" [ref=e1021]:
+          - text: Send enquiry
+          - generic [ref=e1022]: ↗
+  - contentinfo [ref=e1023]:
+    - generic [ref=e1024]:
+      - generic [ref=e1025]:
+        - generic [ref=e1026]: © 2026 Liora Healthcare
+        - list [ref=e1027]:
+          - listitem [ref=e1028]:
+            - link "WhatsApp" [ref=e1029]:
+              - /url: https://wa.me/971500000000
+          - listitem [ref=e1030]:
+            - link "Instagram" [ref=e1031]:
+              - /url: https://instagram.com/liorahealthcare
+          - listitem [ref=e1032]:
+            - link "Email" [ref=e1033]:
+              - /url: mailto:hello@liorahealthcare.com
+        - generic [ref=e1034]: Dubai · United Arab Emirates
+      - paragraph [ref=e1035]: All products are supplied strictly for laboratory research and educational use. Not intended for human or veterinary consumption. Buyer is responsible for ensuring compliance with all applicable local laws and regulations.
+      - generic [ref=e1036]: Liora Healthcare
+  - generic:
+    - button
+    - dialog:
+      - banner:
+        - generic:
+          - text: Your cart
+          - heading [level=2]: 0 items
+        - button: ×
+      - generic:
+        - generic: ◌
+        - paragraph: Your cart is empty.
+        - button: Browse catalogue →

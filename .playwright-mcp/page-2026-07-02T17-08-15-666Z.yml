@@ -1,0 +1,142 @@
+- generic [ref=f4e2]:
+  - status "Important notice" [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+      - generic [ref=f4e6]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+  - generic [ref=f4e7]:
+    - banner [ref=f4e8]:
+      - generic [ref=f4e10]:
+        - link "Alluvi" [ref=f4e11] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=f4e12]
+        - link "Shop" [ref=f4e14] [cursor=pointer]:
+          - /url: /shop
+          - generic [ref=f4e16]: Shop
+        - link "Track" [ref=f4e18] [cursor=pointer]:
+          - /url: /track-order
+          - generic [ref=f4e20]: Track
+        - link "Wholesale" [ref=f4e22] [cursor=pointer]:
+          - /url: /wholesale
+          - generic [ref=f4e24]: Wholesale
+        - link "About Us" [ref=f4e26] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=f4e28]: About Us
+        - link "Verify" [ref=f4e30] [cursor=pointer]:
+          - /url: https://spotafakealluvi.com/
+          - generic [ref=f4e32]: Verify
+        - link "Alluvi Brazil" [ref=f4e34] [cursor=pointer]:
+          - /url: https://alluvibrazil.org/
+          - generic [ref=f4e36]: Alluvi Brazil
+    - main [ref=f4e37]:
+      - generic [ref=f4e39]:
+        - generic [ref=f4e41]:
+          - img "Glow 70mg Product" [ref=f4e43]
+          - generic [ref=f4e44]:
+            - button "View image" [ref=f4e45] [cursor=pointer]:
+              - img "Glow 70mg Product" [ref=f4e46]
+            - button "View image" [ref=f4e47] [cursor=pointer]:
+              - img "Glow 70mg Product" [ref=f4e48]
+            - button "View image" [ref=f4e49] [cursor=pointer]:
+              - img "Glow 70mg Product" [ref=f4e50]
+            - button "View image" [ref=f4e51] [cursor=pointer]:
+              - img "Glow 70mg Product" [ref=f4e52]
+        - generic [ref=f4e53]:
+          - generic [ref=f4e54]: Compound Analysis
+          - heading "Glow 70mg (R&D Only)" [level=1] [ref=f4e55]
+          - generic [ref=f4e57]: £100
+          - generic [ref=f4e58]:
+            - paragraph [ref=f4e59]: A 70mg Glow formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+            - generic [ref=f4e60]:
+              - strong [ref=f4e61]: "Safety Protocol:"
+              - text: Produced for laboratory research only. Not for human or veterinary consumption.
+          - link "View Janoshik Analytical Report" [ref=f4e62] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/163217-ALLUVI_GLOW_70MG_KIT_DCL3AJSE4JQP
+            - img [ref=f4e63]
+            - text: View Janoshik Analytical Report
+          - generic [ref=f4e66]:
+            - generic [ref=f4e67]:
+              - img [ref=f4e69]
+              - generic [ref=f4e71]:
+                - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=f4e72]
+                - paragraph [ref=f4e73]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=f4e74]:
+              - generic [ref=f4e75]:
+                - generic [ref=f4e76]: Batch Number
+                - generic [ref=f4e77]: GL0621XSA
+              - generic [ref=f4e78]:
+                - generic [ref=f4e79]: Fill Volume
+                - generic [ref=f4e80]: 3.4 mL
+            - table [ref=f4e81]:
+              - rowgroup [ref=f4e82]:
+                - row "Compound Concentration Verified Content" [ref=f4e83]:
+                  - columnheader "Compound" [ref=f4e84]
+                  - columnheader "Concentration" [ref=f4e85]
+                  - columnheader "Verified Content" [ref=f4e86]
+              - rowgroup [ref=f4e87]:
+                - row "GHK-Cu 7.59 mg/mL 25.8 mg" [ref=f4e88]:
+                  - cell "GHK-Cu" [ref=f4e89]
+                  - cell "7.59 mg/mL" [ref=f4e90]
+                  - cell "25.8 mg" [ref=f4e91]
+                - row "BPC-157 2.39 mg/mL 8.13 mg" [ref=f4e92]:
+                  - cell "BPC-157" [ref=f4e93]
+                  - cell "2.39 mg/mL" [ref=f4e94]
+                  - cell "8.13 mg" [ref=f4e95]
+                - row "TB-500 1.99 mg/mL 6.76 mg" [ref=f4e96]:
+                  - cell "TB-500" [ref=f4e97]
+                  - cell "1.99 mg/mL" [ref=f4e98]
+                  - cell "6.76 mg" [ref=f4e99]
+            - paragraph [ref=f4e100]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+          - generic [ref=f4e101]:
+            - generic [ref=f4e102]:
+              - button "Package Contents" [ref=f4e103] [cursor=pointer]
+              - button "Storage Logic" [ref=f4e104] [cursor=pointer]
+              - button "Supply Chain" [ref=f4e105] [cursor=pointer]
+            - paragraph [ref=f4e107]: "Each Glow 70mg Research kit includes: 2 × Pre-filled Research pens (Each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu) Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu"
+      - generic [ref=f4e109]:
+        - generic [ref=f4e110]:
+          - heading "Continue Your Research" [level=2] [ref=f4e111]
+          - paragraph [ref=f4e112]: Handpicked research kits that pair well with Glow 70mg.
+        - generic [ref=f4e113]:
+          - link "Retatrutide 20mg Product Compound Retatrutide 20mg (R&D Only)" [ref=f4e115] [cursor=pointer]:
+            - /url: /product/retatrutide-20mg
+            - img "Retatrutide 20mg Product" [ref=f4e117]
+            - generic [ref=f4e118]:
+              - generic [ref=f4e119]: Compound
+              - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=f4e120]
+          - link "Retatrutide 40mg Product Compound Retatrutide 40mg (R&D Only)" [ref=f4e122] [cursor=pointer]:
+            - /url: /product/retatrutide-40mg
+            - img "Retatrutide 40mg Product" [ref=f4e124]
+            - generic [ref=f4e125]:
+              - generic [ref=f4e126]: Compound
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f4e127]
+    - contentinfo [ref=f4e128]:
+      - generic [ref=f4e130]:
+        - link "Alluvi" [ref=f4e132] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=f4e133]
+        - generic [ref=f4e134]:
+          - link "Shop" [ref=f4e135] [cursor=pointer]:
+            - /url: /shop
+          - link "About Us" [ref=f4e136] [cursor=pointer]:
+            - /url: /about
+          - link "Wholesale" [ref=f4e137] [cursor=pointer]:
+            - /url: /wholesale
+          - link "Home" [ref=f4e138] [cursor=pointer]:
+            - /url: /
+          - link "Verify" [ref=f4e139] [cursor=pointer]:
+            - /url: https://spotafakealluvi.com/
+        - generic [ref=f4e140]:
+          - link "Press Release" [ref=f4e141] [cursor=pointer]:
+            - /url: /policies/press-release
+          - link "Refund Policy" [ref=f4e142] [cursor=pointer]:
+            - /url: /policies/refund-policy
+          - link "Shipping Policy" [ref=f4e143] [cursor=pointer]:
+            - /url: /policies/shipping-policy
+        - generic [ref=f4e144]:
+          - link "Privacy Policy" [ref=f4e145] [cursor=pointer]:
+            - /url: /policies/privacy-policy
+          - link "Terms Of Service" [ref=f4e146] [cursor=pointer]:
+            - /url: /policies/terms-of-service
+          - paragraph [ref=f4e147]: © 2026 Alluvi. All rights reserved.
+  - button "Wallet" [ref=f4e148] [cursor=pointer]:
+    - img [ref=f4e149]

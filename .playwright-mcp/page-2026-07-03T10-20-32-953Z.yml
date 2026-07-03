@@ -1,0 +1,191 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - link "Liora Healthcare" [ref=f1e12]:
+        - /url: "#home"
+        - img [ref=f1e14]
+        - generic [ref=f1e21]: Liora
+      - navigation
+      - generic [ref=f1e22]:
+        - button "Sign in" [ref=f1e23] [cursor=pointer]:
+          - img [ref=f1e24]
+        - button "Open cart, 0 items" [ref=f1e27]:
+          - img [ref=f1e28]
+        - button "Open menu" [ref=f1e32]
+  - generic [ref=f1e34]:
+    - button [ref=f1e35]: ×
+    - list [ref=f1e36]:
+      - listitem [ref=f1e37]:
+        - link [ref=f1e38]:
+          - /url: "#home"
+          - text: Home
+      - listitem [ref=f1e39]:
+        - link [ref=f1e40]:
+          - /url: "#about"
+          - text: About
+      - listitem [ref=f1e41]:
+        - link [ref=f1e42]:
+          - /url: "#work"
+          - text: Products
+      - listitem [ref=f1e43]:
+        - link [ref=f1e44]:
+          - /url: "#why-us"
+          - text: Why Us
+      - listitem [ref=f1e45]:
+        - link [ref=f1e46]:
+          - /url: "#faq"
+          - text: FAQ
+      - listitem [ref=f1e47]:
+        - link [ref=f1e48]:
+          - /url: "#contact"
+          - text: Contact
+  - text: → → → → →
+  - main [ref=f1e49]:
+    - generic [ref=f1e101]:
+      - navigation "Breadcrumb" [ref=f1e102]:
+        - button "Back to catalogue" [ref=f1e103]:
+          - generic [ref=f1e104]: Back to catalogue
+        - generic [ref=f1e105]: Catalogue · Metabolic research
+      - generic [ref=f1e106]:
+        - generic [ref=f1e107]:
+          - figure [ref=f1e108]:
+            - img "Retatrutide 20mg" [ref=f1e110]
+            - generic [ref=f1e111]: Verified supply
+            - generic [ref=f1e112]: Sealed & tested
+          - tablist "Product images" [ref=f1e113]:
+            - tab "Retatrutide 20mg view 1" [selected] [ref=f1e114] [cursor=pointer]:
+              - img "Retatrutide 20mg view 1" [ref=f1e115]
+            - tab "Retatrutide 20mg view 2" [ref=f1e116] [cursor=pointer]:
+              - img "Retatrutide 20mg view 2" [ref=f1e117]
+            - tab "Retatrutide 20mg view 3" [ref=f1e118] [cursor=pointer]:
+              - img "Retatrutide 20mg view 3" [ref=f1e119]
+            - tab "Retatrutide 20mg view 4" [ref=f1e120] [cursor=pointer]:
+              - img "Retatrutide 20mg view 4" [ref=f1e121]
+        - generic [ref=f1e122]:
+          - generic [ref=f1e123]:
+            - generic [ref=f1e124]: Metabolic research
+            - heading "Retatrutide 20mg" [level=1] [ref=f1e125]
+            - paragraph [ref=f1e126]: AED 1,290
+          - paragraph [ref=f1e127]: Retatrutide is a next-generation triple agonist designed to engage GLP-1, GIP, and glucagon receptors simultaneously. It is supplied lyophilized for laboratory reconstitution and is commonly used in metabolic, weight-regulation, and energy-pathway research models. Each vial is independently HPLC-tested and ships with a batch-specific certificate of analysis.
+          - generic [ref=f1e128]:
+            - generic [ref=f1e129]:
+              - term [ref=f1e130]: Purity
+              - definition [ref=f1e131]: ≥99% HPLC
+            - generic [ref=f1e132]:
+              - term [ref=f1e133]: Form
+              - definition [ref=f1e134]: Lyophilized powder
+            - generic [ref=f1e135]:
+              - term [ref=f1e136]: Dose
+              - definition [ref=f1e137]: 4 × 5 mg vials
+            - generic [ref=f1e138]:
+              - term [ref=f1e139]: Storage
+              - definition [ref=f1e140]: "-20°C, dry"
+          - generic [ref=f1e141]:
+            - group "Quantity" [ref=f1e142]:
+              - button "Decrease quantity" [ref=f1e143]: −
+              - generic [ref=f1e144]: "1"
+              - button "Increase quantity" [ref=f1e145]: +
+            - button "Add to cart" [ref=f1e146]:
+              - generic [ref=f1e147]: Add to cart
+            - button "Buy now" [ref=f1e148]
+      - generic [ref=f1e149]:
+        - generic [ref=f1e150]:
+          - generic [ref=f1e151]: Related
+          - heading "You might also need" [level=2] [ref=f1e152]
+        - generic [ref=f1e153]:
+          - link "Glow GHK-Cu Recovery & cosmetic Glow GHK-Cu AED 1,199 View" [ref=f1e154]:
+            - /url: "#/product/p2"
+            - img "Glow GHK-Cu" [ref=f1e156]
+            - generic [ref=f1e157]:
+              - generic [ref=f1e158]: Recovery & cosmetic
+              - heading "Glow GHK-Cu" [level=3] [ref=f1e159]
+              - generic [ref=f1e160]:
+                - generic [ref=f1e161]: AED 1,199
+                - generic [ref=f1e162]: View
+          - link "BPC-157 & TB-500 Recovery research BPC-157 & TB-500 AED 999 View" [ref=f1e163]:
+            - /url: "#/product/p3"
+            - img "BPC-157 & TB-500" [ref=f1e165]
+            - generic [ref=f1e166]:
+              - generic [ref=f1e167]: Recovery research
+              - heading "BPC-157 & TB-500" [level=3] [ref=f1e168]
+              - generic [ref=f1e169]:
+                - generic [ref=f1e170]: AED 999
+                - generic [ref=f1e171]: View
+          - link "Tirzepatide 40mg Metabolic research Tirzepatide 40mg AED 1,490 View" [ref=f1e172]:
+            - /url: "#/product/p4"
+            - img "Tirzepatide 40mg" [ref=f1e174]
+            - generic [ref=f1e175]:
+              - generic [ref=f1e176]: Metabolic research
+              - heading "Tirzepatide 40mg" [level=3] [ref=f1e177]
+              - generic [ref=f1e178]:
+                - generic [ref=f1e179]: AED 1,490
+                - generic [ref=f1e180]: View
+  - contentinfo [ref=f1e53]:
+    - generic [ref=f1e54]:
+      - generic [ref=f1e55]:
+        - generic [ref=f1e56]:
+          - generic [ref=f1e57]:
+            - generic [ref=f1e58]: Liora
+            - generic [ref=f1e59]: Healthcare
+          - paragraph [ref=f1e60]: Research-grade peptide supply
+        - generic [ref=f1e61]:
+          - heading "Quick Links" [level=4] [ref=f1e62]
+          - list [ref=f1e63]:
+            - listitem [ref=f1e64]:
+              - link "Home" [ref=f1e65] [cursor=pointer]:
+                - /url: "#home"
+            - listitem [ref=f1e66]:
+              - link "About" [ref=f1e67] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f1e68]:
+              - link "Products" [ref=f1e69] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=f1e70]:
+              - link "Why Us" [ref=f1e71] [cursor=pointer]:
+                - /url: "#why-us"
+            - listitem [ref=f1e72]:
+              - link "FAQ" [ref=f1e73] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f1e74]:
+              - link "Contact" [ref=f1e75] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=f1e76]:
+          - heading "Contact" [level=4] [ref=f1e77]
+          - list [ref=f1e78]:
+            - listitem [ref=f1e79]:
+              - link "hello@liorahealthcare.com" [ref=f1e80] [cursor=pointer]:
+                - /url: mailto:hello@liorahealthcare.com
+            - listitem [ref=f1e81]:
+              - link "+971 50 000 0000" [ref=f1e82] [cursor=pointer]:
+                - /url: https://wa.me/971500000000
+            - listitem [ref=f1e83]:
+              - generic [ref=f1e84]: Dubai · United Arab Emirates
+        - generic [ref=f1e85]:
+          - heading "Follow" [level=4] [ref=f1e86]
+          - list [ref=f1e87]:
+            - listitem [ref=f1e88]:
+              - link "WhatsApp" [ref=f1e89]:
+                - /url: https://wa.me/971500000000
+            - listitem [ref=f1e90]:
+              - link "Instagram" [ref=f1e91]:
+                - /url: https://instagram.com/liorahealthcare
+            - listitem [ref=f1e92]:
+              - link "Email" [ref=f1e93]:
+                - /url: mailto:hello@liorahealthcare.com
+      - generic [ref=f1e95]:
+        - generic [ref=f1e96]: © 2026 Liora Healthcare
+        - generic [ref=f1e97]: Dubai · United Arab Emirates
+      - paragraph [ref=f1e98]: All products are supplied strictly for laboratory research and educational use. Not intended for human or veterinary consumption. Buyer is responsible for ensuring compliance with all applicable local laws and regulations.
+      - generic [ref=f1e99]: Liora Healthcare
+  - generic:
+    - button
+    - dialog:
+      - banner:
+        - generic:
+          - text: Your cart
+          - heading [level=2]: 0 items
+        - button: ×
+      - generic:
+        - generic: ◌
+        - paragraph: Your cart is empty.
+        - button: Browse catalogue
