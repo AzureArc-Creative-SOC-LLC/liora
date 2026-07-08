@@ -5,12 +5,14 @@ import {
   ApiError,
   getAffiliateDashboard,
   getAffiliateStatus,
+  getOrderByNumber,
   getOrdersByEmail,
   getWallet,
   requestAffiliate,
   type AffiliateDashboardResponse,
   type AffiliateStatusResponse,
   type ApiOrderRow,
+  type OrderDetailResponse,
   type WalletResponse,
 } from "../lib/api";
 
@@ -77,6 +79,13 @@ export function AccountPage() {
   const [remoteOrders, setRemoteOrders] = useState<ApiOrderRow[]>([]);
   const [remoteOrdersError, setRemoteOrdersError] = useState<string | null>(
     null,
+  );
+  type DetailState =
+    | { kind: "loading" }
+    | { kind: "ok"; data: OrderDetailResponse }
+    | { kind: "error"; error: string };
+  const [orderDetails, setOrderDetails] = useState<Record<string, DetailState>>(
+    {},
   );
 
   const [showAffiliateForm, setShowAffiliateForm] = useState(false);
@@ -150,6 +159,37 @@ export function AccountPage() {
     const active = account.orders.filter((o) => o.status !== "delivered").length;
     return { totalOrders, totalSpent, active };
   }, [account]);
+
+  const toggleOrderDetail = async (orderNumber: string) => {
+    setOrderDetails((prev) => {
+      if (prev[orderNumber]) {
+        const { [orderNumber]: _drop, ...rest } = prev;
+        void _drop;
+        return rest;
+      }
+      return { ...prev, [orderNumber]: { kind: "loading" } };
+    });
+    // Only fetch when we just added the loading entry (previously absent).
+    if (orderDetails[orderNumber]) return;
+    try {
+      const data = await getOrderByNumber(orderNumber);
+      setOrderDetails((prev) => ({
+        ...prev,
+        [orderNumber]: { kind: "ok", data },
+      }));
+    } catch (err) {
+      setOrderDetails((prev) => ({
+        ...prev,
+        [orderNumber]: {
+          kind: "error",
+          error:
+            err instanceof ApiError
+              ? err.message
+              : "Could not load order detail.",
+        },
+      }));
+    }
+  };
 
   const browseTreatments = () => {
     navigate({ name: "home" });
@@ -455,21 +495,66 @@ export function AccountPage() {
         )}
         {remoteOrders.length > 0 && (
           <ul className="account-remote-orders">
-            {remoteOrders.slice(0, 10).map((row) => (
-              <li key={row.id} className="account-remote-order">
-                <span className="mono">{row.order_number}</span>
-                <span>{row.status ?? "pending"}</span>
-                <span>{row.payment_status ?? "—"}</span>
-                <span>
-                  {row.total !== undefined
-                    ? formatGbp(Number(row.total))
-                    : "—"}
-                </span>
-                <span className="mono">
-                  {row.created_at ? formatDate(row.created_at) : ""}
-                </span>
-              </li>
-            ))}
+            {remoteOrders.slice(0, 10).map((row) => {
+              const detail = orderDetails[row.order_number];
+              const isOpen = !!detail;
+              return (
+                <li key={row.id} className="account-remote-order">
+                  <div className="account-remote-order__row">
+                    <span className="mono">{row.order_number}</span>
+                    <span>{row.status ?? "pending"}</span>
+                    <span>{row.payment_status ?? "—"}</span>
+                    <span>
+                      {row.total !== undefined
+                        ? formatGbp(Number(row.total))
+                        : "—"}
+                    </span>
+                    <span className="mono">
+                      {row.created_at ? formatDate(row.created_at) : ""}
+                    </span>
+                    <button
+                      type="button"
+                      className="account-btn account-btn--ghost account-btn--sm"
+                      onClick={() => toggleOrderDetail(row.order_number)}
+                    >
+                      {isOpen ? "Hide" : "Details"}
+                    </button>
+                  </div>
+                  {detail?.kind === "loading" && (
+                    <p className="mono">Loading details…</p>
+                  )}
+                  {detail?.kind === "error" && (
+                    <p className="account__error mono">{detail.error}</p>
+                  )}
+                  {detail?.kind === "ok" && (
+                    <div className="account-remote-order__detail">
+                      <ul className="account-remote-order__items">
+                        {detail.data.items.map((it) => (
+                          <li key={it.id}>
+                            <span>{it.name}</span>
+                            <span className="mono">× {it.quantity}</span>
+                            <span>{formatGbp(Number(it.line_total))}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {detail.data.payments.length > 0 && (
+                        <ul className="account-remote-order__payments">
+                          {detail.data.payments.map((pay) => (
+                            <li key={pay.id}>
+                              <span className="mono">{pay.provider}</span>
+                              <span>{pay.status}</span>
+                              <span>
+                                {formatGbp(Number(pay.amount))} {pay.currency}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         )}
 

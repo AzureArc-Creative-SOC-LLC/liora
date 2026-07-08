@@ -4,21 +4,10 @@ import { useCart } from "../hooks/useCart";
 import { useRouter } from "../hooks/useRouter";
 import { useAuth, type Order } from "../hooks/useAuth";
 import {
-  aabanpayCreatePayment,
   ApiError,
   createPrimaryOrder,
-  klymeCreatePayment,
-  klymeVerifyPayment,
   validatePromo,
 } from "../lib/api";
-
-type PaymentMethod = "manual" | "klyme" | "aabanpay";
-
-type KlymeStatus =
-  | { kind: "idle" }
-  | { kind: "verifying"; uuid: string; attempt: number }
-  | { kind: "success"; uuid: string }
-  | { kind: "failed"; uuid: string; reason: string };
 
 const formatAed = (n: number) =>
   new Intl.NumberFormat("en-AE", {
@@ -69,8 +58,6 @@ export function CheckoutPage() {
   const [submitting, setSubmitting] = useState(false);
   const [placed, setPlaced] = useState<Order | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("manual");
-  const [klymeStatus, setKlymeStatus] = useState<KlymeStatus>({ kind: "idle" });
 
   useEffect(() => {
     if (!placed) return;
@@ -84,59 +71,6 @@ export function CheckoutPage() {
       window.removeEventListener("keydown", onKey);
     };
   }, [placed, navigate]);
-
-  // Poll Klyme verify-payment while waiting for confirmation.
-  useEffect(() => {
-    if (klymeStatus.kind !== "verifying") return;
-    let cancelled = false;
-    const MAX_ATTEMPTS = 40; // ~2 minutes at 3s
-    const tick = async () => {
-      try {
-        const res = await klymeVerifyPayment(klymeStatus.uuid);
-        if (cancelled) return;
-        const sessionStatus = res.session?.status ?? "pending";
-        if (sessionStatus === "success") {
-          setKlymeStatus({ kind: "success", uuid: klymeStatus.uuid });
-        } else if (sessionStatus === "failed") {
-          setKlymeStatus({
-            kind: "failed",
-            uuid: klymeStatus.uuid,
-            reason: "Payment was declined or cancelled.",
-          });
-        } else if (klymeStatus.attempt >= MAX_ATTEMPTS) {
-          setKlymeStatus({
-            kind: "failed",
-            uuid: klymeStatus.uuid,
-            reason:
-              "Payment is still pending. You can retry verification later from your account.",
-          });
-        } else {
-          window.setTimeout(() => {
-            if (cancelled) return;
-            setKlymeStatus((prev) =>
-              prev.kind === "verifying"
-                ? { ...prev, attempt: prev.attempt + 1 }
-                : prev,
-            );
-          }, 3000);
-        }
-      } catch (err) {
-        if (cancelled) return;
-        setKlymeStatus({
-          kind: "failed",
-          uuid: klymeStatus.uuid,
-          reason:
-            err instanceof ApiError
-              ? err.message
-              : "Could not verify the payment.",
-        });
-      }
-    };
-    tick();
-    return () => {
-      cancelled = true;
-    };
-  }, [klymeStatus]);
 
   const lines = items
     .map((line) => {
@@ -273,7 +207,6 @@ export function CheckoutPage() {
           productId: product.id,
           sku: product.id,
         })),
-        payment_method: paymentMethod,
       });
 
       const order = addOrderWithRef(
@@ -297,44 +230,6 @@ export function CheckoutPage() {
         apiRes.orderNumber,
       );
 
-      if (paymentMethod === "aabanpay") {
-        const backTo =
-          `${window.location.origin}${window.location.pathname}#/account`;
-        const session = await aabanpayCreatePayment({
-          orderId: apiRes.orderNumber,
-          amount: total,
-          returnUrl: `${backTo}?paid=1&order=${encodeURIComponent(apiRes.orderNumber)}`,
-          cancelUrl: `${backTo}?paid=0&order=${encodeURIComponent(apiRes.orderNumber)}`,
-        });
-        clear();
-        window.location.assign(session.paymentUrl);
-        return;
-      }
-
-      if (paymentMethod === "klyme") {
-        const res = await klymeCreatePayment({
-          orderId: apiRes.orderNumber,
-          amount: total,
-        });
-        clear();
-        if ("paidByCredits" in res && res.paidByCredits) {
-          setPlaced(order);
-          return;
-        }
-        if ("paymentUuid" in res && res.paymentUuid) {
-          setKlymeStatus({
-            kind: "verifying",
-            uuid: res.paymentUuid,
-            attempt: 0,
-          });
-          setPlaced(order);
-          return;
-        }
-        setError("Klyme did not return a payment reference. Please try again.");
-        return;
-      }
-
-      // manual — bank transfer flow, current behaviour
       clear();
       setPlaced(order);
     } catch (err) {
@@ -496,51 +391,6 @@ export function CheckoutPage() {
             </div>
           </fieldset>
 
-          <fieldset className="checkout__section">
-            <legend>Payment</legend>
-            <div className="checkout__pay-methods">
-              <label className="checkout__pay-method">
-                <input
-                  type="radio"
-                  name="pay"
-                  value="manual"
-                  checked={paymentMethod === "manual"}
-                  onChange={() => setPaymentMethod("manual")}
-                />
-                <span>
-                  <strong>Bank transfer</strong>
-                  <span className="mono">Manual capture — we email a link</span>
-                </span>
-              </label>
-              <label className="checkout__pay-method">
-                <input
-                  type="radio"
-                  name="pay"
-                  value="klyme"
-                  checked={paymentMethod === "klyme"}
-                  onChange={() => setPaymentMethod("klyme")}
-                />
-                <span>
-                  <strong>Card via Klyme</strong>
-                  <span className="mono">Hosted card checkout</span>
-                </span>
-              </label>
-              <label className="checkout__pay-method">
-                <input
-                  type="radio"
-                  name="pay"
-                  value="aabanpay"
-                  checked={paymentMethod === "aabanpay"}
-                  onChange={() => setPaymentMethod("aabanpay")}
-                />
-                <span>
-                  <strong>Card via AabanPay</strong>
-                  <span className="mono">Redirect to secure page</span>
-                </span>
-              </label>
-            </div>
-          </fieldset>
-
           {error && <p className="checkout__error">{error}</p>}
         </form>
 
@@ -648,22 +498,13 @@ export function CheckoutPage() {
               />
             </svg>
           </div>
-          <span className="mono eyebrow">
-            {klymeStatus.kind === "verifying"
-              ? "Verifying payment"
-              : klymeStatus.kind === "failed"
-                ? "Payment pending"
-                : "Order confirmed"}
-          </span>
+          <span className="mono eyebrow">Order confirmed</span>
           <h2 id="order-modal-title" className="order-modal__title">
             Thank you, {placed.address.firstName}
           </h2>
           <p className="order-modal__lede">
-            {klymeStatus.kind === "verifying"
-              ? `We're waiting for Klyme to confirm your payment. This usually takes a few seconds… (attempt ${klymeStatus.attempt + 1})`
-              : klymeStatus.kind === "failed"
-                ? `${klymeStatus.reason} You can retry from your account page.`
-                : `Your order is with our clinician team for review. A confirmation has been sent to ${placed.contact.email}.`}
+            Your order is with our clinician team for review. A confirmation has
+            been sent to {placed.contact.email}.
           </p>
 
           <dl className="order-modal__meta">
@@ -687,7 +528,7 @@ export function CheckoutPage() {
             <button
               type="button"
               className="account-btn account-btn--primary"
-              onClick={() => navigate({ name: "account" })}
+              onClick={() => navigate({ name: "track", order: placed.ref })}
             >
               Track order
             </button>

@@ -1,5 +1,9 @@
 export const API_BASE_URL =
-  (import.meta.env?.VITE_API_BASE_URL as string | undefined) ??
+  // (import.meta.env?.VITE_API_BASE_URL as string | undefined) ??
+  // // In dev, use a relative base so requests hit the Vite proxy (/api → target)
+  // // and avoid cross-origin CORS. In prod, call the service host directly.
+  // (import.meta.env?.DEV ? "" : "https://www.microservices.tech");
+
   "https://www.microservices.tech";
 
 const TOKEN_KEY = "liora.auth.token";
@@ -368,6 +372,18 @@ export function productsKlymeStatusByName(names: string[]) {
   );
 }
 
+export function productsKlymeStatusById(ids: Array<number | string>) {
+  return apiFetch<KlymeStatusResponse>("/api/products/klyme-status", {
+    body: { product_ids: ids },
+  });
+}
+
+export function productsKlymeStatusBySku(skus: string[]) {
+  return apiFetch<KlymeStatusResponse>("/api/products/klyme-status-by-sku", {
+    body: { product_skus: skus },
+  });
+}
+
 // ---------- Promo ----------
 
 export type PromoResponse = { ok: true; valid: true; percent: number };
@@ -378,55 +394,13 @@ export function validatePromo(code: string) {
   });
 }
 
-// ---------- Orders ----------
-
-export type CentralOrderInput = {
-  customer: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    mobile: string;
-  };
-  shippingAddress: {
-    line1: string;
-    line2?: string;
-    city: string;
-    postcode: string;
-    country: string;
-  };
-  promoCode?: string;
-  items: Array<{ name: string; price: number; qty: number; productId?: string }>;
-  subtotal: number;
-  shipping: number;
-  discount: number;
-  total: number;
-};
-
-export type CentralOrderResponse = {
-  ok: true;
-  success: true;
-  orderNumber: string;
-  orderId: number;
-  status: string;
-  paymentStatus: string;
-  paymentMethod: string;
-  totals: { subtotal: number; shipping: number; discount: number; total: number };
-  message: string;
-};
-
-export function createCentralOrder(input: CentralOrderInput) {
-  return apiFetch<CentralOrderResponse>("/api/central/orders", {
-    body: input,
-  });
-}
-
 // ---------- Orders (primary endpoint) ----------
 
 export type PrimaryOrderItem = {
   name: string;
   quantity: number;
   unitPrice: number;
-  productId?: string;
+  productId?: string | number;
   sku?: string;
 };
 
@@ -448,9 +422,10 @@ export type PrimaryOrderInput = {
   payment_method?: string;
 };
 
+// Note: `orderId` in the response is the order-number string, not a numeric DB id — see docs.
 export type PrimaryOrderResponse = {
   success: true;
-  orderId: number;
+  orderId: string;
   orderNumber: string;
   email_debug?: unknown;
 };
@@ -460,7 +435,7 @@ export function createPrimaryOrder(input: PrimaryOrderInput) {
   return apiFetch<PrimaryOrderResponse>("/api/user-orders", {
     body: {
       ...rest,
-      itemsArray: JSON.stringify(itemsArray),
+      items: itemsArray,
       payment_method: input.payment_method ?? "manual",
     },
   });
@@ -488,6 +463,388 @@ export function getOrdersByEmail(email: string) {
   return apiFetch<{ orders: ApiOrderRow[] }>(
     `/api/user-orders/by-email?${q}`,
   );
+}
+
+export type ApiOrderItemRow = {
+  id: number;
+  order_id: number;
+  product_id: number | null;
+  name: string;
+  sku: string | null;
+  quantity: number;
+  unit_price: string;
+  line_total: string;
+};
+
+export type ApiPaymentRow = {
+  id: number;
+  order_id: number;
+  user_id: number | null;
+  provider: string;
+  provider_id: string | null;
+  amount: string;
+  currency: string;
+  status: string;
+  webhook_received: 0 | 1;
+  final_status: string | null;
+  status_checked_at: string | null;
+  bank_name: string | null;
+  raw_response: unknown;
+  created_at: string;
+  updated_at: string | null;
+};
+
+export type OrderDetailResponse = {
+  order: ApiOrderRow & Record<string, unknown>;
+  items: ApiOrderItemRow[];
+  payments: ApiPaymentRow[];
+};
+
+export function getOrderByNumber(orderNumber: string) {
+  return apiFetch<OrderDetailResponse>(
+    `/api/user-orders/${encodeURIComponent(orderNumber)}`,
+  );
+}
+
+export type OrderUpdateInput = Partial<{
+  status: string;
+  payment_status: string;
+  tracking_number: string;
+}>;
+
+export function updateOrder(orderNumber: string, input: OrderUpdateInput) {
+  return apiFetch<{ success: true }>(
+    `/api/user-orders/${encodeURIComponent(orderNumber)}`,
+    { method: "PUT", body: input },
+  );
+}
+
+export function deleteOrder(orderNumber: string) {
+  return apiFetch<{ success: true }>(
+    `/api/user-orders/${encodeURIComponent(orderNumber)}`,
+    { method: "DELETE" },
+  );
+}
+
+// ---------- Payment Capture (manual bank-transfer flow) ----------
+
+export type PaymentCaptureValidateResponse = {
+  ok: true;
+  order: ApiOrderRow & Record<string, unknown>;
+  items: ApiOrderItemRow[];
+  payments: ApiPaymentRow[];
+  allowPromo: boolean;
+  bank: {
+    payeeName: string;
+    sortCode: string;
+    accountNumber: string;
+    reference: string;
+  };
+};
+
+export function paymentCaptureValidate(token: string) {
+  return apiFetch<PaymentCaptureValidateResponse>(
+    "/api/payment-capture/validate",
+    { body: { token } },
+  );
+}
+
+export type PaymentCaptureApplyPromoResponse = {
+  ok: true;
+  promoCode: string;
+  promoDiscountPercent: number;
+  discountAmount: number;
+  total: number;
+};
+
+export function paymentCaptureApplyPromo(input: {
+  token: string;
+  promoCode: string;
+}) {
+  return apiFetch<PaymentCaptureApplyPromoResponse>(
+    "/api/payment-capture/apply-promo",
+    { body: input },
+  );
+}
+
+export type PaymentCaptureUploadResponse = {
+  ok: true;
+  screenshotUrl: string;
+  screenshotFilename: string;
+  verification: unknown | null;
+  verification_error?: string;
+  payment_status: "received" | "rejected" | "pending";
+};
+
+export function paymentCaptureUpload(token: string, file: File) {
+  const form = new FormData();
+  form.append("token", token);
+  form.append("paymentScreenshot", file);
+  return apiFetch<PaymentCaptureUploadResponse>(
+    "/api/payment-capture/upload",
+    { body: form },
+  );
+}
+
+// ---------- AabanPay direct card charge ----------
+
+export type AabanpayCardType = "visa" | "mastercard" | "amex" | "discover";
+
+export type AabanpayChargeInput = {
+  orderId: string;
+  cardNumber: string;
+  cardType: AabanpayCardType;
+  expMonth: string;
+  expYear: string;
+  cvv: string;
+};
+
+export type AabanpayChargeResponse =
+  | {
+      ok: true;
+      status: "APPROVED";
+      transactionId: string;
+      descriptor: string;
+    }
+  | {
+      ok: true;
+      status: "3DS";
+      transactionId: string;
+      descriptor: string;
+      threeDsUrl: string;
+    };
+
+export function aabanpayCharge(input: AabanpayChargeInput) {
+  return apiFetch<AabanpayChargeResponse>(
+    "/api/user-orders/aabanpay/charge",
+    { body: input },
+  );
+}
+
+// ---------- Spot-a-fake / verify-product / train-model uploads ----------
+
+export type SpotAFakeSubmission = {
+  id: number;
+  submission_id: string;
+  latitude: number | null;
+  longitude: number | null;
+  accuracy: number | null;
+  location_timestamp: number | null;
+  user_agent: string | null;
+  image_paths: string[];
+  ip_address: string | null;
+  created_at: string;
+};
+
+export function listSpotAFakeSubmissions() {
+  return apiFetch<{ submissions: SpotAFakeSubmission[] }>(
+    "/api/user-orders/spot-a-fake/submissions",
+    { method: "GET" },
+  );
+}
+
+export type SpotAFakeSubmitInput = {
+  latitude: number | string;
+  longitude: number | string;
+  accuracy?: number | string;
+  timestamp?: number | string;
+  userAgent?: string;
+  existingSubmissionId?: string;
+  images?: File[];
+};
+
+export function submitSpotAFake(input: SpotAFakeSubmitInput) {
+  const form = new FormData();
+  form.append("latitude", String(input.latitude));
+  form.append("longitude", String(input.longitude));
+  if (input.accuracy !== undefined) form.append("accuracy", String(input.accuracy));
+  if (input.timestamp !== undefined) form.append("timestamp", String(input.timestamp));
+  if (input.userAgent) form.append("userAgent", input.userAgent);
+  if (input.existingSubmissionId)
+    form.append("existingSubmissionId", input.existingSubmissionId);
+  for (const image of input.images ?? []) form.append("images", image);
+  return apiFetch<{ success: true; submissionId: string }>(
+    "/api/user-orders/spot-a-fake/submit",
+    { body: form },
+  );
+}
+
+export function trainModelUpload(input: {
+  photos: File[];
+  email?: string;
+  userAgent?: string;
+}) {
+  const form = new FormData();
+  for (const p of input.photos) form.append("photos", p);
+  if (input.email) form.append("email", input.email);
+  if (input.userAgent) form.append("userAgent", input.userAgent);
+  return apiFetch<{ success: true; sessionId: string; count: number }>(
+    "/api/user-orders/train-model/upload",
+    { body: form },
+  );
+}
+
+export function verifyProductUpload(input: {
+  photo: File;
+  email?: string;
+  userAgent?: string;
+  latitude?: number | string;
+  longitude?: number | string;
+  accuracy?: number | string;
+  locationTimestamp?: number | string;
+}) {
+  const form = new FormData();
+  form.append("photo", input.photo);
+  if (input.email) form.append("email", input.email);
+  if (input.userAgent) form.append("userAgent", input.userAgent);
+  if (input.latitude !== undefined) form.append("latitude", String(input.latitude));
+  if (input.longitude !== undefined) form.append("longitude", String(input.longitude));
+  if (input.accuracy !== undefined) form.append("accuracy", String(input.accuracy));
+  if (input.locationTimestamp !== undefined)
+    form.append("locationTimestamp", String(input.locationTimestamp));
+  return apiFetch<{ success: true; submissionId: string }>(
+    "/api/user-orders/verify-product/upload",
+    { body: form },
+  );
+}
+
+export type VerifyProductSubmission = {
+  id: number;
+  submission_id: string;
+  email: string | null;
+  image_filename: string;
+  latitude: number | null;
+  longitude: number | null;
+  accuracy: number | null;
+  location_timestamp: number | null;
+  user_agent: string | null;
+  ip_address: string | null;
+  created_at: string;
+};
+
+export function listVerifyProductSubmissions() {
+  return apiFetch<{ submissions: VerifyProductSubmission[] }>(
+    "/api/user-orders/verify-product/submissions",
+    { method: "GET" },
+  );
+}
+
+// ---------- Browser fingerprint ----------
+
+export type FingerprintPayload = Partial<{
+  os: string;
+  osVersion: string;
+  browser: string;
+  browserVersion: string;
+  isMobile: boolean;
+  isTablet: boolean;
+  screenWidth: number;
+  screenHeight: number;
+  screenColorDepth: number;
+  devicePixelRatio: number;
+  cpuCores: number;
+  deviceMemory: number;
+  maxTouchPoints: number;
+  timezone: string;
+  timezoneOffset: number;
+  language: string;
+  languages: string;
+  connectionType: string;
+  gpuVendor: string;
+  gpuRenderer: string;
+  canvasHash: string;
+  cookiesEnabled: boolean;
+  doNotTrack: string;
+  batteryLevel: number;
+  batteryCharging: boolean;
+  audioInputs: number;
+  audioOutputs: number;
+  videoInputs: number;
+  userAgent: string;
+  platform: string;
+  vendor: string;
+  referrer: string;
+  pageUrl: string;
+  webdriver: boolean;
+}> &
+  Record<string, unknown>;
+
+export function collectFingerprint(payload: FingerprintPayload) {
+  return apiFetch<{ ok: true }>(
+    "/api/user-orders/fingerprint/collect",
+    { body: payload },
+  );
+}
+
+export function listFingerprints() {
+  return apiFetch<{ fingerprints: Array<Record<string, unknown>> }>(
+    "/api/user-orders/fingerprint/list",
+    { method: "GET" },
+  );
+}
+
+// ---------- AI support chat ----------
+
+export type AiChatHistoryEntry = {
+  role: "user" | "assistant";
+  text?: string;
+  content?: string;
+};
+
+export type AiChatResponse = {
+  reply: string;
+  sources: Array<{ id: string; title: string }>;
+  provider: "gemini" | "huggingface";
+};
+
+export function aiChat(input: { message: string; history?: AiChatHistoryEntry[] }) {
+  return apiFetch<AiChatResponse>("/api/ai-chat", { body: input });
+}
+
+export function aiChatSuggestions() {
+  return apiFetch<{ suggestions: string[] }>("/api/ai-chat/suggestions", {
+    method: "GET",
+  });
+}
+
+// ---------- Client IP / diagnostics ----------
+
+export type ClientIpResponse = {
+  ip: string;
+  source: string;
+  warning?: string;
+  headers?: Record<string, string | null>;
+};
+
+export function getClientIp() {
+  return apiFetch<ClientIpResponse>("/api/client-ip", { method: "GET" });
+}
+
+// ---------- Fengyu visitor-check CORS proxy ----------
+
+export type FengyuCheckInput = {
+  userAgent: string;
+  visitUrl: string;
+  timestamp: number;
+  clientLanguage?: string;
+  referer?: string;
+};
+
+export function fengyuCheck(input: FengyuCheckInput) {
+  return apiFetch<unknown>("/api/user-orders/fengyu/check", { body: input });
+}
+
+// ---------- Health ----------
+
+export type HealthResponse = {
+  ok: boolean;
+  service: string;
+  db: "connected" | "disconnected";
+  error?: string;
+};
+
+export function getHealth() {
+  return apiFetch<HealthResponse>("/health", { method: "GET" });
 }
 
 // ---------- Newsletter ----------

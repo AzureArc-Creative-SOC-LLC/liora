@@ -4788,3 +4788,218 @@ label {
     background-clip: content-box;
   }
 }
+
+/* ================================================================
+   Order tracking
+   ================================================================ */
+
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.track__head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 46rem;
+}
+
+.track__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0.25rem 0 0;
+}
+
+.track__lede {
+  color: var(--color-fg-dim);
+  max-width: 44ch;
+  margin: 0;
+}
+
+.track__form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  border: 1px solid var(--color-outline);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elev);
+}
+
+.track__field {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
+.track__input {
+  font-family: var(--font-mono);
+}
+
+.track__submit {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.track__result {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.track__hint {
+  color: var(--color-fg-dim);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.track__error {
+  margin: 0;
+}
+
+.track__empty {
+  margin: 0;
+}
+
+/* Skeleton loader */
+.track__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem;
+  border: 1px solid var(--color-outline);
+  border-radius: 1.25rem;
+  background: var(--color-bg-elev);
+}
+
+.track__skeleton-line {
+  height: 0.85rem;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-outline-soft) 0%,
+    rgba(255, 255, 255, 0.16) 50%,
+    var(--color-outline-soft) 100%
+  );
+  background-size: 200% 100%;
+  animation: track-shimmer 1.2s var(--ease-in-out) infinite;
+}
+
+.track__skeleton-line--short {
+  width: 45%;
+}
+
+@keyframes track-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track__skeleton-line {
+    animation: none;
+  }
+}
+
+/* Key facts grid */
+.track__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-outline-soft);
+}
+
+.track__meta dt {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-fg-dim);
+  margin-bottom: 0.3rem;
+}
+
+.track__meta dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-fg);
+}
+
+.track__cancelled {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* Customer / shipping columns */
+.track__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-outline-soft);
+}
+
+.track__col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.track__addr {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-fg-dim);
+}
+
+/* Payments */
+.track__payments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-outline-soft);
+}
+
+.track__payments-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.track__payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.88rem;
+}
+
+.track__foot {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .track__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .track__submit {
+    width: 100%;
+  }
+}

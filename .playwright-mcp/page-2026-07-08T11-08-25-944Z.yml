@@ -1,0 +1,143 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]: Booting interface
+    - generic [ref=e6]: 001 / 100
+    - generic [ref=e7]: 1%
+  - banner [ref=e10]:
+    - generic [ref=e11]:
+      - link "Liora Healthcare" [ref=e12]:
+        - /url: "#home"
+        - img [ref=e14]
+        - generic [ref=e20]:
+          - generic [ref=e21]: Liora
+          - generic [ref=e23]: Healthcare
+      - navigation
+      - generic [ref=e24]:
+        - button "Sign in" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+        - button "Open cart, 0 items" [ref=e29]:
+          - img [ref=e30]
+        - button "Open menu" [ref=e34]
+  - generic [ref=e36]:
+    - button [ref=e37]: ×
+    - list [ref=e38]:
+      - listitem [ref=e39]:
+        - link [ref=e40]:
+          - /url: "#home"
+          - text: Home
+      - listitem [ref=e41]:
+        - link [ref=e42]:
+          - /url: "#about"
+          - text: About
+      - listitem [ref=e43]:
+        - link [ref=e44]:
+          - /url: "#work"
+          - text: Products
+      - listitem [ref=e45]:
+        - link [ref=e46]:
+          - /url: "#why-us"
+          - text: Why Us
+      - listitem [ref=e47]:
+        - link [ref=e48]:
+          - /url: "#faq"
+          - text: FAQ
+      - listitem [ref=e49]:
+        - link [ref=e50]:
+          - /url: "#contact"
+          - text: Contact
+  - text: → → → → →
+  - main [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]: Order tracking
+        - heading "Track your order" [level=1] [ref=e55]
+        - paragraph [ref=e56]: Enter your order reference to see its current status, items and delivery details.
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: Order number
+          - textbox "Order number" [ref=e60]:
+            - /placeholder: ORD-20250101-120000000-ABC123
+            - text: ORD-DOES-NOT-EXIST-000000
+        - button "Searching…" [disabled] [ref=e61]
+      - paragraph [ref=e67]: Looking up your order…
+      - button "Back to home" [ref=e69] [cursor=pointer]
+  - contentinfo [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: Liora
+            - generic [ref=e76]: Healthcare
+          - paragraph [ref=e77]: Research-grade peptide supply
+          - generic [ref=e78]:
+            - heading "Stay updated" [level=4] [ref=e79]
+            - generic [ref=e80]:
+              - textbox "Email address" [ref=e81]:
+                - /placeholder: you@lab.com
+              - textbox
+              - button "Subscribe" [ref=e82]
+            - paragraph [ref=e83]: Research updates and restock alerts. No spam.
+        - generic [ref=e84]:
+          - heading "Quick Links" [level=4] [ref=e85]
+          - list [ref=e86]:
+            - listitem [ref=e87]:
+              - link "Home" [ref=e88] [cursor=pointer]:
+                - /url: "#home"
+            - listitem [ref=e89]:
+              - link "About" [ref=e90] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e91]:
+              - link "Products" [ref=e92] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=e93]:
+              - link "Why Us" [ref=e94] [cursor=pointer]:
+                - /url: "#why-us"
+            - listitem [ref=e95]:
+              - link "FAQ" [ref=e96] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=e97]:
+              - link "Contact" [ref=e98] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=e99]:
+              - link "Track order" [ref=e100] [cursor=pointer]:
+                - /url: "#/track"
+        - generic [ref=e101]:
+          - heading "Contact" [level=4] [ref=e102]
+          - list [ref=e103]:
+            - listitem [ref=e104]:
+              - link "hello@liorahealthcare.com" [ref=e105] [cursor=pointer]:
+                - /url: mailto:hello@liorahealthcare.com
+            - listitem [ref=e106]:
+              - link "+971 50 000 0000" [ref=e107] [cursor=pointer]:
+                - /url: https://wa.me/971500000000
+            - listitem [ref=e108]:
+              - generic [ref=e109]: Dubai · United Arab Emirates
+        - generic [ref=e110]:
+          - heading "Follow" [level=4] [ref=e111]
+          - list [ref=e112]:
+            - listitem [ref=e113]:
+              - link "WhatsApp" [ref=e114]:
+                - /url: https://wa.me/971500000000
+            - listitem [ref=e115]:
+              - link "Instagram" [ref=e116]:
+                - /url: https://instagram.com/liorahealthcare
+            - listitem [ref=e117]:
+              - link "Email" [ref=e118]:
+                - /url: mailto:hello@liorahealthcare.com
+      - generic [ref=e120]:
+        - generic [ref=e121]: © 2026 Liora Healthcare
+        - generic [ref=e122]: Dubai · United Arab Emirates
+      - paragraph [ref=e123]: All products are supplied strictly for laboratory research and educational use. Not intended for human or veterinary consumption. Buyer is responsible for ensuring compliance with all applicable local laws and regulations.
+      - generic [ref=e124]: Liora Healthcare
+  - generic:
+    - button
+    - dialog:
+      - banner:
+        - generic:
+          - text: Your cart
+          - heading [level=2]: 0 items
+        - button: ×
+      - generic:
+        - generic: ◌
+        - paragraph: Your cart is empty.
+        - button: Browse catalogue

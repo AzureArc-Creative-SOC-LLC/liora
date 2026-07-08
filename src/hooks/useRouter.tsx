@@ -14,7 +14,8 @@ export type View =
   | { name: "cart" }
   | { name: "checkout" }
   | { name: "login"; redirect?: string }
-  | { name: "account" };
+  | { name: "account" }
+  | { name: "track"; order?: string };
 
 type RouterContextValue = {
   view: View;
@@ -25,6 +26,8 @@ const parse = (hash: string): View => {
   if (/^#\/cart\b/.test(hash)) return { name: "cart" };
   if (/^#\/checkout\b/.test(hash)) return { name: "checkout" };
   if (/^#\/account\b/.test(hash)) return { name: "account" };
+  const track = hash.match(/^#\/track(?:\/([^/?]+))?/);
+  if (track) return { name: "track", order: track[1] ? decodeURIComponent(track[1]) : undefined };
   const login = hash.match(/^#\/login(?:\?redirect=([^&]+))?/);
   if (login) return { name: "login", redirect: login[1] ? decodeURIComponent(login[1]) : undefined };
   const product = hash.match(/^#\/product\/([^/?]+)/);
@@ -70,6 +73,11 @@ export function RouterProvider({ children }: { children: ReactNode }) {
         break;
       case "account":
         hash = "#/account";
+        break;
+      case "track":
+        hash = next.order
+          ? `#/track/${encodeURIComponent(next.order)}`
+          : "#/track";
         break;
     }
     if (hash === "") {

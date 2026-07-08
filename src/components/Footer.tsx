@@ -172,6 +172,18 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="#/track"
+                  data-cursor
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate({ name: "track" });
+                  }}
+                >
+                  Track order
+                </a>
+              </li>
             </ul>
           </div>
 

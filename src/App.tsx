@@ -18,10 +18,12 @@ import { CartPage } from "./components/CartPage";
 import { CheckoutPage } from "./components/CheckoutPage";
 import { LoginPage } from "./components/LoginPage";
 import { AccountPage } from "./components/AccountPage";
+import { OrderTracking } from "./components/OrderTracking";
 import { CartProvider } from "./hooks/useCart";
 import { RouterProvider, useRouter } from "./hooks/useRouter";
 import { AuthProvider } from "./hooks/useAuth";
 import { useSmoothScroll } from "./hooks/useSmoothScroll";
+import { sendFingerprintOnce } from "./lib/fingerprint";
 import "./styles/portfolio.css";
 
 function AppShell() {
@@ -35,6 +37,10 @@ function AppShell() {
   useEffect(() => {
     document.body.classList.toggle("is-product-view", !isHome);
   }, [isHome]);
+
+  useEffect(() => {
+    void sendFingerprintOnce();
+  }, []);
 
   return (
     <>
@@ -75,6 +81,11 @@ function AppShell() {
       {view.name === "account" && (
         <main className="view view--page">
           <AccountPage />
+        </main>
+      )}
+      {view.name === "track" && (
+        <main className="view view--page">
+          <OrderTracking />
         </main>
       )}
       <Footer />
