@@ -68,7 +68,7 @@ export function useSmoothScroll(enabled: boolean = true) {
       // aren't in-page anchors — let the browser handle them.
       if (href.startsWith("#/")) return;
 
-      let dest: HTMLElement | null = null;
+      let dest: HTMLElement | null;
       try {
         dest = document.querySelector<HTMLElement>(href);
       } catch {

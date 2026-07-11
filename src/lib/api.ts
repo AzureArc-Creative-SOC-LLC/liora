@@ -1,10 +1,16 @@
 export const API_BASE_URL =
-  // (import.meta.env?.VITE_API_BASE_URL as string | undefined) ??
-  // // In dev, use a relative base so requests hit the Vite proxy (/api → target)
-  // // and avoid cross-origin CORS. In prod, call the service host directly.
-  // (import.meta.env?.DEV ? "" : "https://www.microservices.tech");
+  "https://www.microservices.tech"; // production
+  // "http://localhost:5003"; // TESTING — local user-order-service
 
-  "https://www.microservices.tech";
+// liora is a static Vite SPA, not Next.js — it has no server-side API routes
+// of its own. Order confirmation email is sent by a tiny companion server
+// (see /server) that this frontend calls after the order is created; that
+// server forwards to the shared order-confirmation email module. In
+// production this is same-origin (nginx proxies /api/send-order-confirmation
+// to the companion server); while testing it's a bare local port.
+const EMAIL_BASE_URL =
+  ""; // production (same-origin, proxied by nginx)
+  // "http://localhost:4003"; // TESTING — local companion email server
 
 const TOKEN_KEY = "liora.auth.token";
 
@@ -94,7 +100,7 @@ export async function apiFetch<T = unknown>(
     );
   }
 
-  let data: unknown = null;
+  let data: unknown;
   const contentType = res.headers.get("content-type") ?? "";
   if (contentType.includes("application/json")) {
     try {
@@ -504,6 +510,70 @@ export function getOrderByNumber(orderNumber: string) {
   return apiFetch<OrderDetailResponse>(
     `/api/user-orders/${encodeURIComponent(orderNumber)}`,
   );
+}
+
+// ---------- Order confirmation email ----------
+
+// Posts to this frontend's own companion server (server/index.js), which
+// forwards to the shared order-confirmation email module. This is a
+// different origin from API_BASE_URL — it never talks to the shared backend.
+//
+// `createPrimaryOrder`'s own response only carries {orderId, orderNumber,
+// email_debug} — it doesn't echo back the persisted order. So the email is
+// built from a fresh `getOrderByNumber` read (the order-creation API's own
+// stored record) rather than local checkout form/cart state, so it reflects
+// what was actually persisted server-side, not what the client guessed
+// pre-submission.
+//
+// Never throws: a failed send should not block the checkout success flow,
+// so failures are only logged.
+export async function sendOrderConfirmationEmail(orderNumber: string): Promise<void> {
+  try {
+    const { order, items } = await getOrderByNumber(orderNumber);
+    const o = order as ApiOrderRow & Record<string, unknown>;
+
+    const customerName =
+      (o.customer_name as string | undefined) || o.customer_email;
+    const shippingAddress = [
+      o.shipping_address as string | undefined,
+      o.shipping_city as string | undefined,
+      o.shipping_zip as string | undefined,
+      o.shipping_country as string | undefined,
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    const res = await fetch(`${EMAIL_BASE_URL}/api/send-order-confirmation`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        customer: { name: customerName, email: o.customer_email },
+        order: {
+          orderNumber: o.order_number,
+          currency: (o.currency as string | undefined) || "USD",
+          items: items.map((it) => ({
+            name: it.name,
+            quantity: it.quantity,
+            price: Number(it.unit_price),
+          })),
+          subtotal: Number(o.subtotal),
+          shipping: Number(o.shipping) || 0,
+          discount: Number((o.discount_amount as string | number | undefined) ?? 0),
+          total: Number(o.total),
+          shippingAddress,
+        },
+      }),
+    });
+
+    if (!res.ok) {
+      console.error("[api] order confirmation email failed", {
+        status: res.status,
+        body: await res.text(),
+      });
+    }
+  } catch (err) {
+    console.error("[api] order confirmation email request failed", err);
+  }
 }
 
 export type OrderUpdateInput = Partial<{

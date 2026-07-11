@@ -6,6 +6,7 @@ import { useAuth, type Order } from "../hooks/useAuth";
 import {
   ApiError,
   createPrimaryOrder,
+  sendOrderConfirmationEmail,
   validatePromo,
 } from "../lib/api";
 
@@ -208,6 +209,13 @@ export function CheckoutPage() {
           sku: product.id,
         })),
       });
+
+      // Fire-and-forget: liora's own branded confirmation email, built from
+      // a fresh read of the persisted order (not local checkout form
+      // state), so it reflects what was actually saved server-side. Never
+      // awaited into this try/catch — a failed send shouldn't undo a
+      // successfully placed order.
+      void sendOrderConfirmationEmail(apiRes.orderNumber);
 
       const order = addOrderWithRef(
         {
