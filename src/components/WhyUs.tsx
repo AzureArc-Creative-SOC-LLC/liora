@@ -98,8 +98,7 @@ export function WhyUs() {
               <img
                 className="why__card-media"
                 src={item.image}
-                alt=""
-                aria-hidden
+                alt={`${item.title} — ${item.description}`}
                 loading="lazy"
               />
 

@@ -57,7 +57,9 @@ body {
   padding: 0;
   background: var(--color-bg);
   color: var(--color-fg);
-  overflow-x: hidden;
+  /* `clip`, not `hidden`: hidden makes body a scroll container, which reserves a
+     second scrollbar gutter and shifts every centered element off-centre. */
+  overflow-x: clip;
 }
 
 body {

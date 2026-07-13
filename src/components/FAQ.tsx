@@ -1,7 +1,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { faqItems } from "../data/site";
-import faqImg from "../assets/researcher.jpeg";
+import faqImg from "../assets/faq-seo.webp";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -15,7 +15,11 @@ export function FAQ() {
 
       <div className="faq__layout">
         <figure className="faq__media" data-cursor data-cursor-text="Lab">
-          <img src={faqImg} alt="Research team in the lab" loading="lazy" />
+          <img
+            src={faqImg}
+            alt="Liora Healthcare research team verifying peptide batches in the Dubai lab"
+            loading="lazy"
+          />
         </figure>
 
         <div className="faq__list">

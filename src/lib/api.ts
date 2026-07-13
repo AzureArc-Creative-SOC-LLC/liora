@@ -428,12 +428,24 @@ export type PrimaryOrderInput = {
   payment_method?: string;
 };
 
+export type OrderEmailStep = {
+  attempted: boolean;
+  ok: boolean;
+  error: string | null;
+};
+
+export type OrderEmailDebug = {
+  paymentLinkCreated?: boolean;
+  orderConfirmation?: OrderEmailStep;
+  paymentCapture?: OrderEmailStep;
+};
+
 // Note: `orderId` in the response is the order-number string, not a numeric DB id — see docs.
 export type PrimaryOrderResponse = {
   success: true;
   orderId: string;
   orderNumber: string;
-  email_debug?: unknown;
+  email_debug?: OrderEmailDebug;
 };
 
 export function createPrimaryOrder(input: PrimaryOrderInput) {
@@ -445,6 +457,39 @@ export function createPrimaryOrder(input: PrimaryOrderInput) {
       payment_method: input.payment_method ?? "manual",
     },
   });
+}
+
+// ---------- Order confirmation email (fallback fire-and-forget) ----------
+
+export type SendOrderConfirmationInput = {
+  orderNumber: string;
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
+  address?: string;
+  city?: string;
+  postcode?: string;
+  country?: string;
+  subtotal: number;
+  total: number;
+  discountAmount?: number;
+  promoCode?: string;
+  items: PrimaryOrderItem[];
+};
+
+export type SendOrderConfirmationResponse = {
+  success: boolean;
+  ok?: boolean;
+  message?: string;
+  error?: string | null;
+};
+
+export function sendOrderConfirmation(input: SendOrderConfirmationInput) {
+  return apiFetch<SendOrderConfirmationResponse>(
+    "/api/send-order-confirmation",
+    { body: input },
+  );
 }
 
 export type ApiOrderRow = {

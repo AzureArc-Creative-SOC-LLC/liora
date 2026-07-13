@@ -74,7 +74,7 @@ function AppShell() {
         </main>
       )}
       {view.name === "login" && (
-        <main className="view view--page">
+        <main className="view view--page view--auth">
           <LoginPage redirect={view.redirect} />
         </main>
       )}

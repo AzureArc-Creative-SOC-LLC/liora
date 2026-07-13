@@ -18,11 +18,17 @@ import tirzUv from "../assets/product-media/tirz-uv.jpg";
 import nadPen from "../assets/product-media/nad-pen.jpg";
 import nadOpen from "../assets/product-media/nad-open.jpg";
 import nadUv from "../assets/product-media/nad-uv.jpg";
-import aboutImg from "../assets/about-img.jpeg";
-import whyConsistent from "../assets/consistent.webp";
-import whyPurity from "../assets/verified-purity.jpg";
-import whyService from "../assets/relaeble-service.webp";
-import whySupport from "../assets/researcher.jpeg";
+import aboutImg from "../assets/about-seo.webp";
+import whyConsistent from "../assets/consistence-seo.webp";
+import whyPurity from "../assets/purity-seo.webp";
+import whyService from "../assets/service-seo.webp";
+import whySupport from "../assets/support-seo.webp";
+import review1 from "../assets/review1-seo.webp";
+import review2 from "../assets/review-2-seo.webp";
+import review3 from "../assets/review3-seo.webp";
+import review4 from "../assets/review4-seo.webp";
+import review5 from "../assets/review5-seo.webp";
+import review6 from "../assets/review6-seo.webp";
 
 export const site = {
   name: "Liora Healthcare",
@@ -238,44 +244,44 @@ export const testimonials = [
   {
     quote:
       "Fast support, reliable products, and a smooth ordering experience. The team truly delivers dependable quality every time.",
-    name: "Emily Carter",
+    name: "Ethan Carter",
     role: "Wellness Consultant",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: review1,
   },
   {
     quote:
       "Everything arrived securely, communication was excellent, and the overall service exceeded expectations for a premium brand.",
-    name: "Sofia Bennett",
+    name: "Samuel Bennett",
     role: "Fitness Coordinator",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+    avatar: review2,
   },
   {
     quote:
       "Product consistency, helpful guidance, and quick responses made the entire process simple, smooth, and extremely satisfying.",
-    name: "Michael Reed",
+    name: "Michelle Reed",
     role: "Research Assistant",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    avatar: review3,
   },
   {
     quote:
       "Support actually answered questions about handling and storage. Most suppliers send a generic FAQ link and disappear.",
     name: "Marco Ruiz",
     role: "Procurement Lead, Vela Biotech",
-    avatar: "https://randomuser.me/api/portraits/men/12.jpg",
+    avatar: review4,
   },
   {
     quote:
       "Pricing is fair, freight is quick, and the certificate of analysis is more detailed than what we used to get from larger suppliers.",
     name: "Sasha Petrov",
     role: "Postdoctoral Researcher",
-    avatar: "https://randomuser.me/api/portraits/men/56.jpg",
+    avatar: review5,
   },
   {
     quote:
       "WhatsApp reply within the hour. That alone changed how we plan ordering for our team.",
-    name: "Priya Natarajan",
+    name: "Rohan Natarajan",
     role: "Co-founder, Ember Research",
-    avatar: "https://randomuser.me/api/portraits/women/71.jpg",
+    avatar: review6,
   },
 ];
 

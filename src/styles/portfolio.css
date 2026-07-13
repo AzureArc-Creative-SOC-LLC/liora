@@ -337,7 +337,7 @@
 
 .hero__layout {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: 1.45fr 1fr;
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
   margin-bottom: 3rem;
@@ -3122,6 +3122,10 @@ label {
   min-height: 100vh;
 }
 
+.view--auth {
+  display: flex;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -3740,6 +3744,9 @@ label {
 .auth {
   display: flex;
   justify-content: center;
+  /* auto block margins center the card in the leftover viewport height
+     without ever pushing it out of reach when the form grows (signup). */
+  margin: auto;
 }
 
 .auth__card {

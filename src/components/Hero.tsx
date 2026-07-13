@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { site, heroCopy } from "../data/site";
 import { SplitText } from "./SplitText";
 import { useMagnetic } from "../hooks/useMagnetic";
-import heroImg from "../assets/hero-img-new.webp";
+import heroImg from "../assets/hero-seo-update.webp";
 
 export function Hero() {
   const root = useRef<HTMLElement | null>(null);
@@ -149,7 +149,10 @@ export function Hero() {
           <span className="hero__layer hero__layer--orange" aria-hidden />
           <span className="hero__layer hero__layer--glass" aria-hidden />
           <div className="hero__image-inner">
-            <img src={heroImg} alt={`${site.name} hero`} />
+            <img
+              src={heroImg}
+              alt="Liora Healthcare research-grade peptides — verified purity, sourced and sealed in Dubai"
+            />
           </div>
           <span className="hero__image-tag hero__image-tag--tl">
             Verified supply
