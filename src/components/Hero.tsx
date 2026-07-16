@@ -13,14 +13,17 @@ export function Hero() {
   useEffect(() => {
     if (!root.current) return;
     const ctx = gsap.context(() => {
-      gsap.set(".hero .char", { yPercent: 110 });
-      gsap.to(".hero .char", {
-        yPercent: 0,
-        duration: 1.2,
-        ease: "power4.out",
-        stagger: { each: 0.025, from: "start" },
-        delay: 0.2,
-      });
+      gsap.fromTo(
+        ".hero .char",
+        { yPercent: 110 },
+        {
+          yPercent: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          stagger: { each: 0.025, from: "start" },
+          delay: 0.2,
+        },
+      );
 
       gsap.from(".hero [data-fade]", {
         y: 24,

@@ -12,17 +12,20 @@ export function WhyUs() {
   useEffect(() => {
     if (!root.current) return;
     const ctx = gsap.context(() => {
-      gsap.set(".why__heading .char", { yPercent: 110 });
-      gsap.to(".why__heading .char", {
-        yPercent: 0,
-        duration: 1,
-        ease: "power4.out",
-        stagger: 0.02,
-        scrollTrigger: {
-          trigger: ".why__heading",
-          start: "top 80%",
+      gsap.fromTo(
+        ".why__heading .char",
+        { yPercent: 110 },
+        {
+          yPercent: 0,
+          duration: 1,
+          ease: "power4.out",
+          stagger: 0.02,
+          scrollTrigger: {
+            trigger: ".why__heading",
+            start: "top 80%",
+          },
         },
-      });
+      );
 
       gsap.from(".why__card", {
         y: 64,

@@ -273,6 +273,18 @@ export function LoginPage({ redirect }: Props) {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            {mode === "signin" && (
+              <div className="field__meta">
+                <button
+                  type="button"
+                  className="auth__link"
+                  onClick={onForgotPassword}
+                  disabled={forgotSending}
+                >
+                  {forgotSending ? "Sending…" : "Forgot your password?"}
+                </button>
+              </div>
+            )}
           </div>
           {(mode === "signup" || mode === "reset") && (
             <div className="field">
@@ -311,14 +323,6 @@ export function LoginPage({ redirect }: Props) {
 
           {mode === "signin" ? (
             <p className="auth__foot">
-              <button
-                type="button"
-                className="auth__link"
-                onClick={onForgotPassword}
-                disabled={forgotSending}
-              >
-                {forgotSending ? "Sending…" : "Forgot your password?"}
-              </button>
               <span>
                 No account?{" "}
                 <button

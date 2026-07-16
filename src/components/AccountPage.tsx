@@ -16,10 +16,10 @@ import {
   type WalletResponse,
 } from "../lib/api";
 
-const formatAed = (n: number) =>
-  new Intl.NumberFormat("en-AE", {
+const formatUsd = (n: number) =>
+  new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "AED",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
 
@@ -325,7 +325,7 @@ export function AccountPage() {
           <div className="account-stat">
             <span className="account-stat__label mono">Lifetime spend</span>
             <span className="account-stat__value">
-              {formatAed(stats.totalSpent)}
+              {formatUsd(stats.totalSpent)}
             </span>
           </div>
           <div className="account-stat">
@@ -614,7 +614,7 @@ export function AccountPage() {
                     <div className="order-card__total">
                       <span className="mono eyebrow">Total</span>
                       <span className="order-card__total-value">
-                        {formatAed(order.total)}
+                        {formatUsd(order.total)}
                       </span>
                     </div>
                   </header>
@@ -631,7 +631,7 @@ export function AccountPage() {
                           </span>
                         </div>
                         <span className="order-card__item-price">
-                          {formatAed(it.price * it.qty)}
+                          {formatUsd(it.price * it.qty)}
                         </span>
                       </li>
                     ))}

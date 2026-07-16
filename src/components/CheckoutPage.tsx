@@ -10,10 +10,10 @@ import {
   validatePromo,
 } from "../lib/api";
 
-const formatAed = (n: number) =>
-  new Intl.NumberFormat("en-AE", {
+const formatUsd = (n: number) =>
+  new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "AED",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
 
@@ -411,7 +411,7 @@ export function CheckoutPage() {
                   {product.title}
                   <span className="mono"> × {line.qty}</span>
                 </span>
-                <span>{formatAed(product.price * line.qty)}</span>
+                <span>{formatUsd(product.price * line.qty)}</span>
               </li>
             ))}
           </ul>
@@ -430,14 +430,14 @@ export function CheckoutPage() {
             </div>
             {promoApplied && (
               <p className="checkout__promo-ok mono">
-                {promoApplied.code} applied — −{formatAed(promoApplied.amount)}
+                {promoApplied.code} applied — −{formatUsd(promoApplied.amount)}
               </p>
             )}
           </div>
           <dl className="checkout__summary-rows">
             <div>
               <dt>Subtotal</dt>
-              <dd>{formatAed(subtotal)}</dd>
+              <dd>{formatUsd(subtotal)}</dd>
             </div>
             <div>
               <dt>Shipping</dt>
@@ -446,12 +446,12 @@ export function CheckoutPage() {
             {discount > 0 && (
               <div>
                 <dt>Discount</dt>
-                <dd>−{formatAed(discount)}</dd>
+                <dd>−{formatUsd(discount)}</dd>
               </div>
             )}
             <div className="checkout__summary-total">
               <dt>Total</dt>
-              <dd>{formatAed(total)}</dd>
+              <dd>{formatUsd(total)}</dd>
             </div>
           </dl>
           <button
@@ -522,7 +522,7 @@ export function CheckoutPage() {
             </div>
             <div>
               <dt className="mono">Total</dt>
-              <dd>{formatAed(placed.total)}</dd>
+              <dd>{formatUsd(placed.total)}</dd>
             </div>
             <div>
               <dt className="mono">Ship to</dt>

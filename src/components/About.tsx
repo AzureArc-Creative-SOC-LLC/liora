@@ -25,17 +25,23 @@ export function About() {
   useEffect(() => {
     if (!root.current) return;
     const ctx = gsap.context(() => {
-      gsap.set(".about__heading .char", { yPercent: 110 });
-      gsap.to(".about__heading .char", {
-        yPercent: 0,
-        duration: 1,
-        ease: "power4.out",
-        stagger: 0.02,
-        scrollTrigger: {
-          trigger: ".about__heading",
-          start: "top 80%",
+      // The start state must live inside the tween: a standalone gsap.set() is
+      // re-applied by ScrollTrigger.refresh() (which images fire on load) and
+      // strands the chars offset behind the .split mask.
+      gsap.fromTo(
+        ".about__heading .char",
+        { yPercent: 110 },
+        {
+          yPercent: 0,
+          duration: 1,
+          ease: "power4.out",
+          stagger: 0.02,
+          scrollTrigger: {
+            trigger: ".about__heading",
+            start: "top 80%",
+          },
         },
-      });
+      );
 
       gsap.utils
         .toArray<HTMLElement>(".about__stat-value")

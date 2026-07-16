@@ -7,10 +7,10 @@ import { productsKlymeStatusByName } from "../lib/api";
 
 type Props = { id: string };
 
-const formatAed = (n: number) =>
-  new Intl.NumberFormat("en-AE", {
+const formatUsd = (n: number) =>
+  new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "AED",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
 
@@ -161,7 +161,7 @@ export function ProductDetail({ id }: Props) {
             <div className="pdp__heading">
               <span className="eyebrow">{product.sector}</span>
               <h1 className="pdp__title">{product.title}</h1>
-              <p className="pdp__price">{formatAed(product.price)}</p>
+              <p className="pdp__price">{formatUsd(product.price)}</p>
               {klymeEligible && (
                 <span className="pdp__badge mono">
                   Klyme card checkout available
@@ -251,7 +251,7 @@ export function ProductDetail({ id }: Props) {
                   <h3 className="related__name">{p.title}</h3>
                   <div className="related__row">
                     <span className="related__price">
-                      {formatAed(p.price)}
+                      {formatUsd(p.price)}
                     </span>
                     <span className="related__view">View</span>
                   </div>

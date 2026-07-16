@@ -6,6 +6,10 @@ import productNad from "../assets/product-5-new.jpeg";
 import reta20Pen from "../assets/product-media/reta20-pen.jpg";
 import reta20Open from "../assets/product-media/reta20-open.jpg";
 import reta20Uv from "../assets/product-media/reta20-uv.jpg";
+import reta40Front from "../assets/product-media/reta40-front.jpg";
+import reta40Pen from "../assets/product-media/reta40-pen.jpg";
+import reta40Open from "../assets/product-media/reta40-open.jpg";
+import reta40Uv from "../assets/product-media/reta40-uv.jpg";
 import glowPen from "../assets/product-media/glow-pen.jpg";
 import glowOpen from "../assets/product-media/glow-open.jpg";
 import glowUv from "../assets/product-media/glow-uv.jpg";
@@ -142,8 +146,8 @@ export const projects = [
     id: "p1",
     title: "Retatrutide 20mg",
     sector: "Metabolic research",
-    year: "AED 1,290",
-    price: 1290,
+    year: "USD 350",
+    price: 350,
     summary:
       "Triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as 20 mg (4 × 5 mg doses) for metabolic and energy-pathway research.",
     description:
@@ -162,8 +166,8 @@ export const projects = [
     id: "p2",
     title: "Glow GHK-Cu",
     sector: "Recovery & cosmetic",
-    year: "AED 1,199",
-    price: 1199,
+    year: "USD 329",
+    price: 329,
     summary:
       "Skin, hair and cellular-repair blend pairing BPC-157, TB500 and GHK-Cu. Studied in regeneration and tissue-repair research.",
     description:
@@ -182,8 +186,8 @@ export const projects = [
     id: "p3",
     title: "BPC-157 & TB-500",
     sector: "Recovery research",
-    year: "AED 999",
-    price: 999,
+    year: "USD 269",
+    price: 269,
     summary:
       "Recovery and repair pairing supplied at 40 mg (4 × 10 mg doses). Widely used in tissue-regeneration assays.",
     description:
@@ -202,8 +206,8 @@ export const projects = [
     id: "p4",
     title: "Tirzepatide 40mg",
     sector: "Metabolic research",
-    year: "AED 1,490",
-    price: 1490,
+    year: "USD 399",
+    price: 399,
     summary:
       "Dual agonist of GLP-1 and GIP receptors. Supplied as 40 mg (4 × 10 mg doses) for glucose-regulation and metabolic studies.",
     description:
@@ -219,11 +223,31 @@ export const projects = [
     ],
   },
   {
+    id: "p6",
+    title: "Retatrutide 40mg",
+    sector: "Metabolic research",
+    year: "USD 629",
+    price: 629,
+    summary:
+      "Higher-dose triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as 40 mg (4 × 10 mg doses) for extended metabolic research protocols.",
+    description:
+      "Retatrutide is a next-generation triple agonist engaging GLP-1, GIP, and glucagon receptors simultaneously. This 40 mg presentation supports extended metabolic, weight-regulation, and energy-pathway research studies. Each vial is independently HPLC-tested at ≥99% purity and ships with a batch-specific certificate of analysis.",
+    accent: "#ffe0b8",
+    image: reta40Front,
+    subImages: [reta40Front, reta40Pen, reta40Open, reta40Uv],
+    specs: [
+      { label: "Purity", value: "≥99% HPLC" },
+      { label: "Form", value: "Lyophilized powder" },
+      { label: "Dose", value: "4 × 10 mg vials" },
+      { label: "Storage", value: "-20°C, dry" },
+    ],
+  },
+  {
     id: "p5",
     title: "NAD+ 1000mg",
     sector: "Cellular research",
-    year: "AED 899",
-    price: 899,
+    year: "USD 249",
+    price: 249,
     summary:
       "Focus, brain cellular-repair and anti-aging research compound supplied at 1,000 mg for cellular-metabolism investigations.",
     description:

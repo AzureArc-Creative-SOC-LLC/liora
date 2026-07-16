@@ -4,10 +4,10 @@ import { projects } from "../data/site";
 import { useCart } from "../hooks/useCart";
 import { useRouter } from "../hooks/useRouter";
 
-const formatAed = (n: number) =>
-  new Intl.NumberFormat("en-AE", {
+const formatUsd = (n: number) =>
+  new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "AED",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
 
@@ -144,7 +144,7 @@ export function CartDrawer() {
                         </button>
                       </div>
                       <span className="cart__item-price">
-                        {formatAed(product.price * line.qty)}
+                        {formatUsd(product.price * line.qty)}
                       </span>
                     </div>
                   </div>
@@ -164,7 +164,7 @@ export function CartDrawer() {
               <div className="cart__totals">
                 <span>Subtotal</span>
                 <span className="cart__total-value">
-                  {formatAed(subtotal)}
+                  {formatUsd(subtotal)}
                 </span>
               </div>
               <p className="cart__note mono">
