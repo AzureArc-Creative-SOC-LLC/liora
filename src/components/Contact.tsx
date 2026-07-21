@@ -35,9 +35,9 @@ export function Contact() {
             Place an order or ask a question.
           </h2>
           <p className="contact__body">
-            Tell us what you need — a single vial, a recurring lab supply, or a
-            quote for a custom catalogue. We reply by email or WhatsApp within
-            a working day.
+            Tell us what you need — a single research kit, a recurring lab
+            supply, or a quote for a custom catalogue. We reply by email or
+            WhatsApp within a working day.
           </p>
 
           <ul className="contact__channels">

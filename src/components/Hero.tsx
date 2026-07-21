@@ -154,7 +154,7 @@ export function Hero() {
           <div className="hero__image-inner">
             <img
               src={heroImg}
-              alt="Liora Healthcare research-grade peptides — verified purity, sourced and sealed in Dubai"
+              alt="Liora Healthcare research-grade peptides — verified purity, sealed and third-party tested"
             />
           </div>
           <span className="hero__image-tag hero__image-tag--tl">

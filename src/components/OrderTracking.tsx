@@ -191,8 +191,7 @@ export function OrderTracking() {
         <span className="mono eyebrow">Order tracking</span>
         <h1 className="track__title">Track your order</h1>
         <p className="track__lede">
-          Enter your order reference to see its current status, items and
-          delivery details.
+          Enter your order reference to see its current status and details.
         </p>
       </header>
 
@@ -399,7 +398,7 @@ export function OrderTracking() {
                 </p>
               </div>
               <div className="track__col">
-                <span className="mono eyebrow">Ship to</span>
+                <span className="mono eyebrow">Address</span>
                 <p className="track__addr">
                   {[
                     order.shipping_address,

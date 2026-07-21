@@ -638,7 +638,7 @@ export function AccountPage() {
                   </ul>
 
                   <div className="order-card__shipping mono">
-                    Ship to · {order.address.city}, {order.address.country}
+                    Address · {[order.address.city, order.address.country].filter(Boolean).join(", ")}
                   </div>
 
                   <div className="order-card__progress">

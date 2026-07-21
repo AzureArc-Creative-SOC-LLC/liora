@@ -1,0 +1,265 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - link "Liora Healthcare" [ref=f1e12]:
+        - /url: "#home"
+        - generic [ref=f1e20]:
+          - generic [ref=f1e21]: Liora
+          - generic [ref=f1e23]: Healthcare
+      - navigation
+      - generic [ref=f1e24]:
+        - button "Sign in" [ref=f1e25] [cursor=pointer]
+        - button "Open cart, 0 items" [ref=f1e29]
+        - button "Open menu" [ref=f1e34]
+  - generic [ref=f1e36]:
+    - button [ref=f1e37]: ×
+    - list [ref=f1e38]:
+      - listitem [ref=f1e39]:
+        - link [ref=f1e40]:
+          - /url: "#home"
+          - text: Home
+      - listitem [ref=f1e41]:
+        - link [ref=f1e42]:
+          - /url: "#about"
+          - text: About
+      - listitem [ref=f1e43]:
+        - link [ref=f1e44]:
+          - /url: "#work"
+          - text: Products
+      - listitem [ref=f1e45]:
+        - link [ref=f1e46]:
+          - /url: "#why-us"
+          - text: Why Us
+      - listitem [ref=f1e47]:
+        - link [ref=f1e48]:
+          - /url: "#faq"
+          - text: FAQ
+      - listitem [ref=f1e49]:
+        - link [ref=f1e50]:
+          - /url: "#contact"
+          - text: Contact
+  - text: → → → → → →
+  - main [ref=f1e51]:
+    - generic [ref=f1e52]:
+      - generic [ref=f1e53]:
+        - navigation "Breadcrumb" [ref=f1e54]:
+          - button "Back to catalogue" [ref=f1e55]
+          - generic [ref=f1e57]: Catalogue · Compound Analysis
+        - generic [ref=f1e58]:
+          - generic [ref=f1e59]:
+            - figure [ref=f1e60]:
+              - img "Retatrutide 20mg" [ref=f1e62]
+              - generic [ref=f1e63]: Verified supply
+              - generic [ref=f1e64]: Sealed & tested
+            - tablist "Product images" [ref=f1e65]:
+              - tab [selected] [ref=f1e66] [cursor=pointer]:
+                - img "Retatrutide 20mg view 1" [ref=f1e67]
+              - tab [ref=f1e68] [cursor=pointer]:
+                - img "Retatrutide 20mg view 2" [ref=f1e69]
+              - tab [ref=f1e70] [cursor=pointer]:
+                - img "Retatrutide 20mg view 3" [ref=f1e71]
+              - tab [ref=f1e72] [cursor=pointer]:
+                - img "Retatrutide 20mg view 4" [ref=f1e73]
+          - generic [ref=f1e74]:
+            - generic [ref=f1e75]:
+              - generic [ref=f1e76]: Compound Analysis
+              - heading "Retatrutide 20mg (R&D Only)" [level=1] [ref=f1e77]
+              - paragraph [ref=f1e78]: $350
+              - generic [ref=f1e257]: Klyme card checkout available
+            - paragraph [ref=f1e79]: A 20mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+            - paragraph [ref=f1e80]:
+              - strong [ref=f1e81]: "Safety Protocol:"
+              - text: Produced for laboratory research only. Not for human or veterinary consumption.
+            - button "View Janoshik Analytical Report" [ref=f1e82]
+            - region "Lab analysis" [ref=f1e84]:
+              - generic [ref=f1e85]:
+                - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=f1e86]
+                - paragraph [ref=f1e87]: Independently tested and verified by Janoshik Analytical.
+              - generic [ref=f1e88]:
+                - generic [ref=f1e89]:
+                  - term [ref=f1e90]: Batch Number
+                  - definition [ref=f1e91]: AR1721TRT
+                - generic [ref=f1e92]:
+                  - term [ref=f1e93]: Fill Volume
+                  - definition [ref=f1e94]: 2.4 mL
+                - generic [ref=f1e95]:
+                  - term [ref=f1e96]: Purity
+                  - definition [ref=f1e97]: 99.21%
+              - table [ref=f1e99]:
+                - rowgroup [ref=f1e100]:
+                  - row [ref=f1e101]:
+                    - columnheader "Compound" [ref=f1e102]
+                    - columnheader "Concentration" [ref=f1e103]
+                    - columnheader "Verified Content" [ref=f1e104]
+                - rowgroup [ref=f1e105]:
+                  - row [ref=f1e106]:
+                    - cell "Retatrutide" [ref=f1e107]
+                    - cell "9.57 mg/mL" [ref=f1e108]
+                    - cell "22.96 mg" [ref=f1e109]
+              - paragraph [ref=f1e110]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+            - generic [ref=f1e111]:
+              - tablist "Product details" [ref=f1e112]:
+                - tab "Package Contents" [selected] [ref=f1e113]
+                - tab "Storage Logic" [ref=f1e114]
+              - tabpanel [ref=f1e115]:
+                - listitem [ref=f1e116]: Pre-filled Research pen (20mg Retatrutide)
+                - listitem [ref=f1e117]: Research information sheet
+            - generic [ref=f1e118]:
+              - generic [ref=f1e119]:
+                - term [ref=f1e120]: Purity
+                - definition [ref=f1e121]: ≥99% HPLC
+              - generic [ref=f1e122]:
+                - term [ref=f1e123]: Form
+                - definition [ref=f1e124]: Pre-filled research pen
+              - generic [ref=f1e125]:
+                - term [ref=f1e126]: Dose
+                - definition [ref=f1e127]: 20 mg total
+              - generic [ref=f1e128]:
+                - term [ref=f1e129]: Storage
+                - definition [ref=f1e130]: 2–8°C, do not freeze
+            - generic [ref=f1e131]:
+              - group "Quantity" [ref=f1e132]:
+                - button "Decrease quantity" [ref=f1e133]: −
+                - generic [ref=f1e134]: "1"
+                - button "Increase quantity" [ref=f1e135]: +
+              - button "Add to cart" [ref=f1e136]
+        - generic [ref=f1e138]:
+          - generic [ref=f1e139]:
+            - generic [ref=f1e140]: Related
+            - heading "You might also need" [level=2] [ref=f1e141]
+          - generic [ref=f1e142]:
+            - link "Glow 70mg Compound Analysis Glow 70mg $329 View" [ref=f1e143]:
+              - /url: "#/product/p2"
+              - img "Glow 70mg" [ref=f1e145]
+              - generic [ref=f1e146]:
+                - generic [ref=f1e147]: Compound Analysis
+                - heading "Glow 70mg" [level=3] [ref=f1e148]
+                - generic [ref=f1e149]:
+                  - generic [ref=f1e150]: $329
+                  - generic [ref=f1e151]: View
+            - link "BPC-157 & TB-500 40mg Compound Analysis BPC-157 & TB-500 40mg $269 View" [ref=f1e152]:
+              - /url: "#/product/p3"
+              - img "BPC-157 & TB-500 40mg" [ref=f1e154]
+              - generic [ref=f1e155]:
+                - generic [ref=f1e156]: Compound Analysis
+                - heading "BPC-157 & TB-500 40mg" [level=3] [ref=f1e157]
+                - generic [ref=f1e158]:
+                  - generic [ref=f1e159]: $269
+                  - generic [ref=f1e160]: View
+            - link "Tirzepatide 40mg Compound Analysis Tirzepatide 40mg $399 View" [ref=f1e161]:
+              - /url: "#/product/p4"
+              - img "Tirzepatide 40mg" [ref=f1e163]
+              - generic [ref=f1e164]:
+                - generic [ref=f1e165]: Compound Analysis
+                - heading "Tirzepatide 40mg" [level=3] [ref=f1e166]
+                - generic [ref=f1e167]:
+                  - generic [ref=f1e168]: $399
+                  - generic [ref=f1e169]: View
+      - dialog "Janoshik lab analysis for Retatrutide 20mg" [ref=f1e170]:
+        - generic [ref=f1e171]:
+          - button "Close lab analysis" [ref=f1e172]: ×
+          - heading "Janoshik Third-Party Lab Analysis" [level=2] [ref=f1e176]
+          - paragraph [ref=f1e177]: Independently tested and verified by Janoshik Analytical.
+          - generic [ref=f1e178]:
+            - generic [ref=f1e179]:
+              - term [ref=f1e180]: Batch Number
+              - definition [ref=f1e181]: AR1721TRT
+            - generic [ref=f1e182]:
+              - term [ref=f1e183]: Fill Volume
+              - definition [ref=f1e184]: 2.4 mL
+            - generic [ref=f1e185]:
+              - term [ref=f1e186]: Purity
+              - definition [ref=f1e187]: 99.21%
+          - table [ref=f1e189]:
+            - rowgroup [ref=f1e190]:
+              - row [ref=f1e191]:
+                - columnheader "Compound" [ref=f1e192]
+                - columnheader "Concentration" [ref=f1e193]
+                - columnheader "Verified Content" [ref=f1e194]
+            - rowgroup [ref=f1e195]:
+              - row [ref=f1e196]:
+                - cell "Retatrutide" [ref=f1e197]
+                - cell "9.57 mg/mL" [ref=f1e198]
+                - cell "22.96 mg" [ref=f1e199]
+          - paragraph [ref=f1e200]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+          - button "View Full Janoshik Report" [ref=f1e201]
+  - contentinfo [ref=f1e202]:
+    - generic [ref=f1e203]:
+      - generic [ref=f1e204]:
+        - generic [ref=f1e205]:
+          - generic [ref=f1e206]:
+            - generic [ref=f1e207]: Liora
+            - generic [ref=f1e208]: Healthcare
+          - paragraph [ref=f1e209]: Research-grade peptide supply
+          - generic [ref=f1e210]:
+            - heading "Stay updated" [level=4] [ref=f1e211]
+            - generic [ref=f1e212]:
+              - textbox "Email address" [ref=f1e213]:
+                - /placeholder: you@lab.com
+              - textbox
+              - button "Subscribe" [ref=f1e214]
+            - paragraph [ref=f1e215]: Research updates and restock alerts. No spam.
+        - generic [ref=f1e216]:
+          - heading "Quick Links" [level=4] [ref=f1e217]
+          - list [ref=f1e218]:
+            - listitem [ref=f1e219]:
+              - link "Home" [ref=f1e220] [cursor=pointer]:
+                - /url: "#home"
+            - listitem [ref=f1e221]:
+              - link "About" [ref=f1e222] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f1e223]:
+              - link "Products" [ref=f1e224] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=f1e225]:
+              - link "Why Us" [ref=f1e226] [cursor=pointer]:
+                - /url: "#why-us"
+            - listitem [ref=f1e227]:
+              - link "FAQ" [ref=f1e228] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f1e229]:
+              - link "Contact" [ref=f1e230] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f1e231]:
+              - link "Track order" [ref=f1e232] [cursor=pointer]:
+                - /url: "#/track"
+        - generic [ref=f1e233]:
+          - heading "Contact" [level=4] [ref=f1e234]
+          - list [ref=f1e235]:
+            - listitem [ref=f1e236]:
+              - link "hello@liorahealthcare.com" [ref=f1e237] [cursor=pointer]:
+                - /url: mailto:hello@liorahealthcare.com
+            - listitem [ref=f1e238]:
+              - link "+1 000 000 0000" [ref=f1e239] [cursor=pointer]:
+                - /url: https://wa.me/10000000000
+            - listitem [ref=f1e240]:
+              - generic [ref=f1e241]: Global research supply
+        - generic [ref=f1e242]:
+          - heading "Follow" [level=4] [ref=f1e243]
+          - list [ref=f1e244]:
+            - listitem [ref=f1e245]:
+              - link "WhatsApp" [ref=f1e246]:
+                - /url: https://wa.me/10000000000
+            - listitem [ref=f1e247]:
+              - link "Instagram" [ref=f1e248]:
+                - /url: https://instagram.com/liorahealthcare
+            - listitem [ref=f1e249]:
+              - link "Email" [ref=f1e250]:
+                - /url: mailto:hello@liorahealthcare.com
+      - generic [ref=f1e252]:
+        - generic [ref=f1e253]: © 2026 Liora Healthcare
+        - generic [ref=f1e254]: Global research supply
+      - paragraph [ref=f1e255]: All products are supplied strictly for laboratory research and educational use. Not intended for human or veterinary consumption. Buyer is responsible for ensuring compliance with all applicable local laws and regulations.
+      - generic [ref=f1e256]: Liora Healthcare
+  - generic:
+    - button
+    - dialog:
+      - banner:
+        - generic:
+          - text: Your cart
+          - heading [level=2]: 0 items
+        - button: ×
+      - generic:
+        - generic: ◌
+        - paragraph: Your cart is empty.
+        - button: Browse catalogue

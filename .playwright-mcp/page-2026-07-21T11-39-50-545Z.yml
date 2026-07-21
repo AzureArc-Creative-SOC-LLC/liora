@@ -1,0 +1,119 @@
+- generic [ref=e2]:
+  - status "Important notice" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+      - generic [ref=e6]: "SOCIAL MEDIA WARNING: Alluvi has never operated on any social media platforms. Please don't make any payments or fall victim to anything claiming to be Alluvi on social media platforms. | OFFICIAL SITE: Our official site is www.alluvi.org — we are only handling this site. Please Beware of other scam sites. | RESEARCH USE ONLY – NOT FOR HUMAN CONSUMPTION: All products are for laboratory research and in vitro studies only. Not for human or veterinary use."
+  - generic [ref=e7]:
+    - banner [ref=e8]:
+      - generic [ref=e10]:
+        - link [ref=e11] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=e12]
+        - link "Shop" [ref=e14] [cursor=pointer]:
+          - /url: /shop
+        - link "Track" [ref=e18] [cursor=pointer]:
+          - /url: /track-order
+        - link "Wholesale" [ref=e22] [cursor=pointer]:
+          - /url: /wholesale
+        - link "About Us" [ref=e26] [cursor=pointer]:
+          - /url: /about
+        - link "Verify" [ref=e30] [cursor=pointer]:
+          - /url: https://spotafakealluvi.com/
+        - link "Alluvi Brazil" [ref=e34] [cursor=pointer]:
+          - /url: https://alluvibrazil.org/
+    - main [ref=e37]:
+      - generic [ref=e39]:
+        - generic [ref=e41]:
+          - img "Tirzepatide 40mg Product" [ref=e43]
+          - generic [ref=e44]:
+            - button "View image" [ref=e45] [cursor=pointer]:
+              - img "Tirzepatide 40mg Product" [ref=e46]
+            - button "View image" [ref=e47] [cursor=pointer]:
+              - img "Tirzepatide 40mg Product" [ref=e48]
+            - button "View image" [ref=e49] [cursor=pointer]:
+              - img "Tirzepatide 40mg Product" [ref=e50]
+            - button "View image" [ref=e51] [cursor=pointer]:
+              - img "Tirzepatide 40mg Product" [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]: Compound Analysis
+          - heading "Tirzepatide 40mg (R&D Only)" [level=1] [ref=e55]
+          - generic [ref=e56]: £100
+          - generic [ref=e58]:
+            - paragraph [ref=e59]: A 40mg Tirzepatide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+            - generic [ref=e60]:
+              - strong [ref=e61]: "Safety Protocol:"
+              - text: Produced for laboratory research only. Not for human or veterinary consumption.
+          - link "View Janoshik Analytical Report" [ref=e62] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/147174-ALLUVI_TIRZEPATIDE_40MG_KIT_T5MBWRAYD4HN
+          - generic [ref=e66]:
+            - generic [ref=e71]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=e72]
+              - paragraph [ref=e73]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - generic [ref=e76]: Batch Number
+                - generic [ref=e77]: TR786PAOS
+              - generic [ref=e78]:
+                - generic [ref=e79]: Fill Volume
+                - generic [ref=e80]: 3 mL
+              - generic [ref=e81]:
+                - generic [ref=e82]: Purity
+                - generic [ref=e83]: 99.85%
+            - table [ref=e84]:
+              - rowgroup [ref=e85]:
+                - row [ref=e86]:
+                  - columnheader "Compound" [ref=e87]
+                  - columnheader "Concentration" [ref=e88]
+                  - columnheader "Verified Content" [ref=e89]
+              - rowgroup [ref=e90]:
+                - row [ref=e91]:
+                  - cell "Tirzepatide" [ref=e92]
+                  - cell "13.35 mg/mL" [ref=e93]
+                  - cell "40.05 mg" [ref=e94]
+            - paragraph [ref=e95]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - button "Package Contents" [ref=e98] [cursor=pointer]
+              - button "Storage Logic" [ref=e99] [cursor=pointer]
+              - button "Supply Chain" [ref=e100] [cursor=pointer]
+            - paragraph [ref=e102]: "Each Tirzepatide 40mg Research kit includes: Pre-filled Research pen (40mg Tirzepatide) Research information sheet"
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - heading "Continue Your Research" [level=2] [ref=e106]
+          - paragraph [ref=e107]: Handpicked research kits that pair well with Tirzepatide 40mg.
+        - link "Retatrutide 40mg Product Compound Retatrutide 40mg (R&D Only)" [ref=e110] [cursor=pointer]:
+          - /url: /product/retatrutide-40mg
+          - img "Retatrutide 40mg Product" [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114]: Compound
+            - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=e115]
+    - contentinfo [ref=e116]:
+      - generic [ref=e118]:
+        - link [ref=e120] [cursor=pointer]:
+          - /url: /
+          - img "Alluvi" [ref=e121]
+        - generic [ref=e122]:
+          - link "Shop" [ref=e123] [cursor=pointer]:
+            - /url: /shop
+          - link "About Us" [ref=e124] [cursor=pointer]:
+            - /url: /about
+          - link "Wholesale" [ref=e125] [cursor=pointer]:
+            - /url: /wholesale
+          - link "Home" [ref=e126] [cursor=pointer]:
+            - /url: /
+          - link "Verify" [ref=e127] [cursor=pointer]:
+            - /url: https://spotafakealluvi.com/
+        - generic [ref=e128]:
+          - link "Press Release" [ref=e129] [cursor=pointer]:
+            - /url: /policies/press-release
+          - link "Refund Policy" [ref=e130] [cursor=pointer]:
+            - /url: /policies/refund-policy
+          - link "Shipping Policy" [ref=e131] [cursor=pointer]:
+            - /url: /policies/shipping-policy
+        - generic [ref=e132]:
+          - link "Privacy Policy" [ref=e133] [cursor=pointer]:
+            - /url: /policies/privacy-policy
+          - link "Terms Of Service" [ref=e134] [cursor=pointer]:
+            - /url: /policies/terms-of-service
+          - paragraph [ref=e135]: © 2026 Alluvi. All rights reserved.
+  - button "Wallet" [ref=e136] [cursor=pointer]

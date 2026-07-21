@@ -62,12 +62,12 @@ export function Testimonials() {
         <div>
           <span className="eyebrow">Reviews</span>
           <h2 className="h2" style={{ marginTop: "1rem" }}>
-            From researchers we ship to.
+            From researchers we support.
           </h2>
         </div>
         <p className="lead">
           Unedited words from {testimonials.length}+ labs and independent
-          researchers we've supplied across the GCC and beyond.
+          researchers we've supplied.
         </p>
       </div>
 

@@ -30,9 +30,7 @@ export function LoginPage({ redirect }: Props) {
   const [confirm, setConfirm] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [nationality, setNationality] = useState("");
-  const [countryOfResidence, setCountryOfResidence] = useState(
-    "United Arab Emirates",
-  );
+  const [countryOfResidence, setCountryOfResidence] = useState("");
   const [resetToken, setResetToken] = useState(initialToken ?? "");
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
@@ -242,7 +240,7 @@ export function LoginPage({ redirect }: Props) {
                 <label htmlFor="au-nat">Nationality</label>
                 <input
                   id="au-nat"
-                  placeholder="Emirati"
+                  placeholder="Nationality"
                   value={nationality}
                   onChange={(e) => setNationality(e.target.value)}
                   required
@@ -253,7 +251,7 @@ export function LoginPage({ redirect }: Props) {
                 <input
                   id="au-cor"
                   autoComplete="country-name"
-                  placeholder="United Arab Emirates"
+                  placeholder="Country of residence"
                   value={countryOfResidence}
                   onChange={(e) => setCountryOfResidence(e.target.value)}
                   required

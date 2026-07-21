@@ -38,7 +38,7 @@ const emptyForm: FormState = {
   line2: "",
   city: "",
   postcode: "",
-  country: "United Arab Emirates",
+  country: "",
 };
 
 export function CheckoutPage() {
@@ -300,7 +300,7 @@ export function CheckoutPage() {
           </fieldset>
 
           <fieldset className="checkout__section">
-            <legend>Shipping address</legend>
+            <legend>Address</legend>
             <div className="field-row">
               <div className="field">
                 <label htmlFor="co-first">First name</label>
@@ -361,7 +361,7 @@ export function CheckoutPage() {
                 <input
                   id="co-city"
                   autoComplete="address-level2"
-                  placeholder="Dubai"
+                  placeholder="City"
                   value={form.city}
                   onChange={(e) => setField("city", e.target.value)}
                   aria-invalid={!!errors.city}
@@ -388,7 +388,7 @@ export function CheckoutPage() {
               <input
                 id="co-country"
                 autoComplete="country-name"
-                placeholder="United Arab Emirates"
+                placeholder="Country"
                 value={form.country}
                 onChange={(e) => setField("country", e.target.value)}
                 aria-invalid={!!errors.country}
@@ -438,10 +438,6 @@ export function CheckoutPage() {
             <div>
               <dt>Subtotal</dt>
               <dd>{formatUsd(subtotal)}</dd>
-            </div>
-            <div>
-              <dt>Shipping</dt>
-              <dd>Free</dd>
             </div>
             {discount > 0 && (
               <div>
@@ -525,9 +521,11 @@ export function CheckoutPage() {
               <dd>{formatUsd(placed.total)}</dd>
             </div>
             <div>
-              <dt className="mono">Ship to</dt>
+              <dt className="mono">Address</dt>
               <dd>
-                {placed.address.city}, {placed.address.country}
+                {placed.address.city}
+                {placed.address.city && placed.address.country ? ", " : ""}
+                {placed.address.country}
               </dd>
             </div>
           </dl>

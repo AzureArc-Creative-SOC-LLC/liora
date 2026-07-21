@@ -3,10 +3,15 @@ import productGlow from "../assets/product-6-new.jpeg";
 import productBpcTb from "../assets/product-1-new.jpeg";
 import productTirzepatide from "../assets/product-2-new.jpeg";
 import productNad from "../assets/product-5-new.jpeg";
+import productRetatrutide40 from "../assets/updated-products-img/Artboard 3 copy 4.jpg (1).jpeg";
+import janoshikTirzepatide40 from "../assets/janoshik/tirzepatide-40mg.png";
+import janoshikRetatrutide20 from "../assets/janoshik/retatrutide-20mg.png";
+import janoshikRetatrutide40 from "../assets/janoshik/retatrutide-40mg.png";
+import janoshikGlow70 from "../assets/janoshik/glow-70mg.png";
+import janoshikBpcTb500 from "../assets/janoshik/bpc-tb500-40mg.png";
 import reta20Pen from "../assets/product-media/reta20-pen.jpg";
 import reta20Open from "../assets/product-media/reta20-open.jpg";
 import reta20Uv from "../assets/product-media/reta20-uv.jpg";
-import reta40Front from "../assets/product-media/reta40-front.jpg";
 import reta40Pen from "../assets/product-media/reta40-pen.jpg";
 import reta40Open from "../assets/product-media/reta40-open.jpg";
 import reta40Uv from "../assets/product-media/reta40-uv.jpg";
@@ -40,12 +45,12 @@ export const site = {
   brandSub: "Healthcare",
   aboutImage: aboutImg,
   role: "Research-grade peptide supply",
-  location: "Dubai · United Arab Emirates",
+  location: "Global research supply",
   email: "hello@liorahealthcare.com",
-  phone: "+971 50 000 0000",
-  whatsapp: "https://wa.me/971500000000",
+  phone: "+1 000 000 0000",
+  whatsapp: "https://wa.me/10000000000",
   socials: [
-    { label: "WhatsApp", href: "https://wa.me/971500000000" },
+    { label: "WhatsApp", href: "https://wa.me/10000000000" },
     { label: "Instagram", href: "https://instagram.com/liorahealthcare" },
     { label: "Email", href: "mailto:hello@liorahealthcare.com" },
   ],
@@ -63,8 +68,8 @@ export const heroCopy = {
   headlineTop: "Purity",
   headlineBottom: "First.",
   intro:
-    "Research-grade peptides and supplement formulations, sourced from verified suppliers and packed to exacting standards — so every vial delivers the purity, potency, and consistency your work depends on.",
-  available: "Now shipping worldwide",
+    "Research-grade peptides and supplement formulations, sourced from verified suppliers and packed to exacting standards — so every kit delivers the purity, potency, and consistency your work depends on.",
+  available: "Independently lab tested",
 };
 
 export const aboutCopy = {
@@ -102,7 +107,7 @@ export const whyUs = [
     number: "03",
     title: "Reliable service",
     description:
-      "Every step — from order to delivery — is designed to provide a smooth, dependable customer experience.",
+      "Every step — from order to handover — is designed to provide a smooth, dependable customer experience.",
     image: whyService,
   },
   {
@@ -145,121 +150,240 @@ export const projects = [
   {
     id: "p1",
     title: "Retatrutide 20mg",
-    sector: "Metabolic research",
+    sector: "Compound Analysis",
     year: "USD 350",
     price: 350,
     summary:
-      "Triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as 20 mg (4 × 5 mg doses) for metabolic and energy-pathway research.",
+      "Triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as a pre-filled 20 mg research device for metabolic and energy-pathway studies.",
     description:
-      "Retatrutide is a next-generation triple agonist designed to engage GLP-1, GIP, and glucagon receptors simultaneously. It is supplied lyophilized for laboratory reconstitution and is commonly used in metabolic, weight-regulation, and energy-pathway research models. Each vial is independently HPLC-tested and ships with a batch-specific certificate of analysis.",
+      "A 20mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.",
+    safetyProtocol:
+      "Produced for laboratory research only. Not for human or veterinary consumption.",
     accent: "#ffeec8",
     image: productRetatrutide,
     subImages: [productRetatrutide, reta20Pen, reta20Open, reta20Uv],
     specs: [
       { label: "Purity", value: "≥99% HPLC" },
-      { label: "Form", value: "Lyophilized powder" },
-      { label: "Dose", value: "4 × 5 mg vials" },
-      { label: "Storage", value: "-20°C, dry" },
+      { label: "Form", value: "Pre-filled research pen" },
+      { label: "Dose", value: "20 mg total" },
+      { label: "Storage", value: "2–8°C, do not freeze" },
+    ],
+    labAnalysis: {
+      lab: "Janoshik Analytical",
+      batchNumber: "AR1721TRT",
+      fillVolume: "2.4 mL",
+      purity: "99.21%",
+      compounds: [
+        { name: "Retatrutide", concentration: "9.57 mg/mL", verified: "22.96 mg" },
+      ],
+      reportUrl: "#janoshik-retatrutide-20mg",
+      reportImages: [janoshikRetatrutide20],
+    },
+    packageContents: [
+      "Pre-filled Research pen (20mg Retatrutide)",
+      "Research information sheet",
+    ],
+    storageLogic: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
   {
     id: "p2",
-    title: "Glow GHK-Cu",
-    sector: "Recovery & cosmetic",
+    title: "Glow 70mg",
+    sector: "Compound Analysis",
     year: "USD 329",
     price: 329,
     summary:
-      "Skin, hair and cellular-repair blend pairing BPC-157, TB500 and GHK-Cu. Studied in regeneration and tissue-repair research.",
+      "Skin, hair and cellular-repair blend pairing GHK-Cu with BPC-157 and TB-500 in a single pre-filled research device.",
     description:
-      "A research blend pairing GHK-Cu with BPC-157 and TB-500 — three of the most studied peptides in regenerative and cosmetic research. Supplied as a sterile lyophilized powder with documented purity for skin, hair, and tissue-repair investigations.",
+      "A 70mg Glow formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.",
+    safetyProtocol:
+      "Produced for laboratory research only. Not for human or veterinary consumption.",
     accent: "#c9d8ff",
     image: productGlow,
     subImages: [productGlow, glowPen, glowOpen, glowUv],
     specs: [
       { label: "Purity", value: "≥98% HPLC" },
-      { label: "Form", value: "Lyophilized blend" },
-      { label: "Dose", value: "Multi-vial pack" },
-      { label: "Storage", value: "-20°C, dry" },
+      { label: "Form", value: "Pre-filled research pens" },
+      { label: "Dose", value: "2 × 35 mg pens" },
+      { label: "Storage", value: "2–8°C, do not freeze" },
     ],
-  },
-  {
-    id: "p3",
-    title: "BPC-157 & TB-500",
-    sector: "Recovery research",
-    year: "USD 269",
-    price: 269,
-    summary:
-      "Recovery and repair pairing supplied at 40 mg (4 × 10 mg doses). Widely used in tissue-regeneration assays.",
-    description:
-      "A classic pairing for tissue-regeneration and recovery research. Each vial is lyophilized for reconstitution, with batch-level HPLC verification and mass-spec confirmation included with every shipment.",
-    accent: "#d6ffd0",
-    image: productBpcTb,
-    subImages: [productBpcTb, bpcPen, bpcOpen, bpcUv],
-    specs: [
-      { label: "Purity", value: "≥99% HPLC" },
-      { label: "Form", value: "Lyophilized powder" },
-      { label: "Dose", value: "4 × 10 mg vials" },
-      { label: "Storage", value: "-20°C, dry" },
+    labAnalysis: {
+      lab: "Janoshik Analytical",
+      batchNumber: "GL0621XSA",
+      fillVolume: "3.4 mL",
+      purity: "98.6%",
+      compounds: [
+        { name: "GHK-Cu", concentration: "7.59 mg/mL", verified: "25.80 mg" },
+        { name: "BPC-157", concentration: "2.39 mg/mL", verified: "8.13 mg" },
+        { name: "TB-500", concentration: "1.99 mg/mL", verified: "6.76 mg" },
+      ],
+      reportUrl: "#janoshik-glow-70mg",
+      reportImages: [janoshikGlow70],
+    },
+    packageContents: [
+      "2 × Pre-filled Research pens (each contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu)",
+      "Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu",
+      "Research information sheet",
     ],
-  },
-  {
-    id: "p4",
-    title: "Tirzepatide 40mg",
-    sector: "Metabolic research",
-    year: "USD 399",
-    price: 399,
-    summary:
-      "Dual agonist of GLP-1 and GIP receptors. Supplied as 40 mg (4 × 10 mg doses) for glucose-regulation and metabolic studies.",
-    description:
-      "Tirzepatide is a dual GLP-1 / GIP receptor agonist widely used in metabolic and glucose-regulation research. Supplied lyophilized at 40 mg total across four sealed vials, with a certificate of analysis included.",
-    accent: "#ffd4c2",
-    image: productTirzepatide,
-    subImages: [productTirzepatide, tirzPen, tirzOpen, tirzUv],
-    specs: [
-      { label: "Purity", value: "≥99% HPLC" },
-      { label: "Form", value: "Lyophilized powder" },
-      { label: "Dose", value: "4 × 10 mg vials" },
-      { label: "Storage", value: "-20°C, dry" },
+    storageLogic: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
   {
     id: "p6",
     title: "Retatrutide 40mg",
-    sector: "Metabolic research",
+    sector: "Compound Analysis",
     year: "USD 629",
     price: 629,
     summary:
-      "Higher-dose triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as 40 mg (4 × 10 mg doses) for extended metabolic research protocols.",
+      "Higher-dose triple-agonist of GLP-1, GIP and glucagon receptors. Supplied as a pre-filled 40 mg research device for extended metabolic protocols.",
     description:
-      "Retatrutide is a next-generation triple agonist engaging GLP-1, GIP, and glucagon receptors simultaneously. This 40 mg presentation supports extended metabolic, weight-regulation, and energy-pathway research studies. Each vial is independently HPLC-tested at ≥99% purity and ships with a batch-specific certificate of analysis.",
+      "A 40mg Retatrutide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.",
+    safetyProtocol:
+      "Produced for laboratory research only. Not for human or veterinary consumption.",
     accent: "#ffe0b8",
-    image: reta40Front,
-    subImages: [reta40Front, reta40Pen, reta40Open, reta40Uv],
+    image: productRetatrutide40,
+    subImages: [productRetatrutide40, reta40Pen, reta40Open, reta40Uv],
     specs: [
       { label: "Purity", value: "≥99% HPLC" },
-      { label: "Form", value: "Lyophilized powder" },
-      { label: "Dose", value: "4 × 10 mg vials" },
-      { label: "Storage", value: "-20°C, dry" },
+      { label: "Form", value: "Pre-filled research pen" },
+      { label: "Dose", value: "40 mg total" },
+      { label: "Storage", value: "2–8°C, do not freeze" },
+    ],
+    labAnalysis: {
+      lab: "Janoshik Analytical",
+      batchNumber: "AR1739JAT",
+      fillVolume: "2.4 mL",
+      purity: "99.269%",
+      compounds: [
+        { name: "Retatrutide", concentration: "18.22 mg/mL", verified: "43.72 mg" },
+      ],
+      reportUrl: "#janoshik-retatrutide-40mg",
+      reportImages: [janoshikRetatrutide40],
+    },
+    packageContents: [
+      "Pre-filled Research pen (40mg Retatrutide)",
+      "Research information sheet",
+    ],
+    storageLogic: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
+    ],
+  },
+  {
+    id: "p4",
+    title: "Tirzepatide 40mg",
+    sector: "Compound Analysis",
+    year: "USD 399",
+    price: 399,
+    summary:
+      "Dual agonist of GLP-1 and GIP receptors. Supplied as a pre-filled 40 mg research device for glucose-regulation and metabolic studies.",
+    description:
+      "A 40mg Tirzepatide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.",
+    safetyProtocol:
+      "Produced for laboratory research only. Not for human or veterinary consumption.",
+    accent: "#ffd4c2",
+    image: productTirzepatide,
+    subImages: [productTirzepatide, tirzPen, tirzOpen, tirzUv],
+    specs: [
+      { label: "Purity", value: "≥99% HPLC" },
+      { label: "Form", value: "Pre-filled research pen" },
+      { label: "Dose", value: "40 mg total" },
+      { label: "Storage", value: "2–8°C, do not freeze" },
+    ],
+    labAnalysis: {
+      lab: "Janoshik Analytical",
+      batchNumber: "TR786PAOS",
+      fillVolume: "3 mL",
+      purity: "99.85%",
+      compounds: [
+        { name: "Tirzepatide", concentration: "13.35 mg/mL", verified: "40.05 mg" },
+      ],
+      reportUrl: "#janoshik-tirzepatide-40mg",
+      reportImages: [janoshikTirzepatide40],
+    },
+    packageContents: [
+      "Pre-filled Research pen (40mg Tirzepatide)",
+      "Research information sheet",
+    ],
+    storageLogic: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
+    ],
+  },
+  {
+    id: "p3",
+    title: "BPC-157 & TB-500 40mg",
+    sector: "Compound Analysis",
+    year: "USD 269",
+    price: 269,
+    summary:
+      "Recovery and repair pairing of BPC-157 and TB-500 supplied at 40 mg in a pre-filled research device.",
+    description:
+      "A 40mg BPC-157 & TB-500 formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.",
+    safetyProtocol:
+      "Produced for laboratory research only. Not for human or veterinary consumption.",
+    accent: "#d6ffd0",
+    image: productBpcTb,
+    subImages: [productBpcTb, bpcPen, bpcOpen, bpcUv],
+    specs: [
+      { label: "Purity", value: "≥99% HPLC" },
+      { label: "Form", value: "Pre-filled research pen" },
+      { label: "Dose", value: "20 mg BPC-157 + 20 mg TB-500" },
+      { label: "Storage", value: "2–8°C, do not freeze" },
+    ],
+    labAnalysis: {
+      lab: "Janoshik Analytical",
+      batchNumber: "BP1701FSR",
+      fillVolume: "3 mL",
+      purity: "99.32%",
+      compounds: [
+        { name: "BPC-157", concentration: "7.33 mg/mL", verified: "21.99 mg" },
+        { name: "TB-500", concentration: "6.53 mg/mL", verified: "19.59 mg" },
+      ],
+      reportUrl: "#janoshik-bpc-tb500-40mg",
+      reportImages: [janoshikBpcTb500],
+    },
+    packageContents: [
+      "Pre-filled Research pen (20mg BPC-157, 20mg TB-500)",
+      "Research information sheet",
+    ],
+    storageLogic: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
   {
     id: "p5",
     title: "NAD+ 1000mg",
-    sector: "Cellular research",
+    sector: "Support",
     year: "USD 249",
     price: 249,
     summary:
-      "Focus, brain cellular-repair and anti-aging research compound supplied at 1,000 mg for cellular-metabolism investigations.",
+      "Focus, brain cellular-repair and anti-aging research compound supplied at 1,000 mg total across two pre-filled research pens.",
     description:
-      "NAD+ (nicotinamide adenine dinucleotide) is a foundational coenzyme studied across cellular-metabolism, mitochondrial-health, and aging research. Supplied as a high-purity 1,000 mg vial for reconstitution.",
+      "NAD+ (Nicotinamide Adenine Dinucleotide) research formulation for laboratory analysis and in vitro studies only. Provided exclusively for controlled laboratory R&D applications.",
+    safetyProtocol:
+      "Produced for laboratory research only. Not for human or veterinary consumption.",
     accent: "#ffeec8",
     image: productNad,
     subImages: [productNad, nadPen, nadOpen, nadUv],
     specs: [
       { label: "Purity", value: "≥99% HPLC" },
-      { label: "Form", value: "Lyophilized powder" },
-      { label: "Dose", value: "1,000 mg vial" },
-      { label: "Storage", value: "-20°C, dry" },
+      { label: "Form", value: "Pre-filled research pens" },
+      { label: "Dose", value: "2 × 500 mg pens" },
+      { label: "Storage", value: "2–8°C, do not freeze" },
+    ],
+    packageContents: [
+      "2 × Pre-filled NAD+ pens (500mg each)",
+      "Research information sheet",
+    ],
+    storageLogic: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
     ],
   },
 ];
@@ -295,7 +419,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Pricing is fair, freight is quick, and the certificate of analysis is more detailed than what we used to get from larger suppliers.",
+      "Pricing is fair, turnaround is quick, and the certificate of analysis is more detailed than what we used to get from larger suppliers.",
     name: "Sasha Petrov",
     role: "Postdoctoral Researcher",
     avatar: review5,
@@ -313,32 +437,22 @@ export const faqItems = [
   {
     question: "What documentation comes with each order?",
     answer:
-      "Every vial ships with a certificate of analysis listing lot number, synthesis date, HPLC purity, and mass-spec confirmation. Storage and handling notes are included on the packing slip.",
+      "Every research kit is paired with a batch-specific certificate of analysis listing lot number, HPLC purity, and mass-spec confirmation. Storage and handling notes are included on the packing slip.",
   },
   {
     question: "How is purity verified?",
     answer:
-      "Each batch is independently tested by reverse-phase HPLC and high-resolution mass spectrometry. We retain a reference sample from every lot for cross-verification on request.",
+      "Each batch is independently tested by reverse-phase HPLC and high-resolution mass spectrometry, then verified by Janoshik Analytical. We retain a reference sample from every lot for cross-verification on request.",
   },
   {
-    question: "How are shipments packaged?",
+    question: "How is the product packaged?",
     answer:
-      "Vials ship in insulated double-walled mailers with phase-change gel packs sized for the destination's transit window. Temperature loggers are included on orders above a set threshold or on request.",
-  },
-  {
-    question: "Do you ship outside the UAE?",
-    answer:
-      "Yes — we currently dispatch across the GCC and to select international research addresses. Some destinations require additional import documentation; we'll confirm what's needed before processing.",
-  },
-  {
-    question: "How long does delivery take?",
-    answer:
-      "UAE orders typically arrive within 24–48 hours of despatch. GCC orders arrive in 2–4 working days. International shipments depend on customs clearance at the destination.",
+      "Products are sealed inside tamper-evident research kits with pre-filled research devices. Cold-chain packaging is used where the compound requires refrigeration.",
   },
   {
     question: "What's the return policy?",
     answer:
-      "We don't accept returns on opened or temperature-compromised vials. If a shipment arrives damaged or out of spec, contact us within 48 hours of delivery and we'll replace or refund.",
+      "We don't accept returns on opened or temperature-compromised kits. If a research kit arrives damaged or out of spec, contact us within 48 hours of receipt and we'll replace or refund.",
   },
   {
     question: "How can I pay?",

@@ -168,7 +168,7 @@ export function CartDrawer() {
                 </span>
               </div>
               <p className="cart__note mono">
-                Shipping calculated at checkout — discreet dispatch
+                Taxes and any handling fees are calculated at checkout
               </p>
               <button
                 type="button"

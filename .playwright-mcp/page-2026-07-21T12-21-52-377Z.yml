@@ -1,0 +1,231 @@
+- generic [ref=f10e2]:
+  - generic [ref=f10e4]:
+    - generic [ref=f10e5]: Finalizing
+    - generic [ref=f10e6]: 100 / 100
+    - generic [ref=f10e7]: 100%
+  - banner [ref=f10e10]:
+    - generic [ref=f10e11]:
+      - link "Liora Healthcare" [ref=f10e12]:
+        - /url: "#home"
+        - generic [ref=f10e20]:
+          - generic [ref=f10e21]: Liora
+          - generic [ref=f10e23]: Healthcare
+      - navigation [ref=f10e226]:
+        - list [ref=f10e227]:
+          - listitem [ref=f10e228]:
+            - link "Home" [ref=f10e229]:
+              - /url: "#home"
+          - listitem [ref=f10e230]:
+            - link "About" [ref=f10e231]:
+              - /url: "#about"
+          - listitem [ref=f10e232]:
+            - link "Products" [ref=f10e233]:
+              - /url: "#work"
+          - listitem [ref=f10e234]:
+            - link "Why Us" [ref=f10e235]:
+              - /url: "#why-us"
+          - listitem [ref=f10e236]:
+            - link "FAQ" [ref=f10e237]:
+              - /url: "#faq"
+          - listitem [ref=f10e238]:
+            - link "Contact" [ref=f10e239]:
+              - /url: "#contact"
+      - generic [ref=f10e24]:
+        - button "Sign in" [ref=f10e25] [cursor=pointer]
+        - button "Open cart, 0 items" [ref=f10e29]
+  - text: → → → → → →
+  - main [ref=f10e51]:
+    - generic [ref=f10e53]:
+      - navigation "Breadcrumb" [ref=f10e54]:
+        - button "Back to catalogue" [ref=f10e55]
+        - generic [ref=f10e57]: Catalogue · Compound Analysis
+      - generic [ref=f10e58]:
+        - generic [ref=f10e59]:
+          - figure [ref=f10e60]:
+            - img "Tirzepatide 40mg" [ref=f10e62]
+            - generic [ref=f10e63]: Verified supply
+            - generic [ref=f10e64]: Sealed & tested
+          - tablist "Product images" [ref=f10e65]:
+            - tab [selected] [ref=f10e66] [cursor=pointer]:
+              - img "Tirzepatide 40mg view 1" [ref=f10e67]
+            - tab [ref=f10e68] [cursor=pointer]:
+              - img "Tirzepatide 40mg view 2" [ref=f10e69]
+            - tab [ref=f10e70] [cursor=pointer]:
+              - img "Tirzepatide 40mg view 3" [ref=f10e71]
+            - tab [ref=f10e72] [cursor=pointer]:
+              - img "Tirzepatide 40mg view 4" [ref=f10e73]
+        - generic [ref=f10e74]:
+          - generic [ref=f10e75]:
+            - generic [ref=f10e76]: Compound Analysis
+            - heading "Tirzepatide 40mg (R&D Only)" [level=1] [ref=f10e77]
+            - paragraph [ref=f10e78]: $399
+          - paragraph [ref=f10e79]: A 40mg Tirzepatide formulation supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound stability analysis, formulation studies, and delivery mechanism evaluation.
+          - paragraph [ref=f10e80]:
+            - strong [ref=f10e81]: "Safety Protocol:"
+            - text: Produced for laboratory research only. Not for human or veterinary consumption.
+          - button "View Janoshik Analytical Report" [ref=f10e82]
+          - region "Lab analysis" [ref=f10e84]:
+            - generic [ref=f10e85]:
+              - heading "Janoshik Third-Party Lab Analysis" [level=3] [ref=f10e86]
+              - paragraph [ref=f10e87]: Independently tested and verified by Janoshik Analytical.
+            - generic [ref=f10e88]:
+              - generic [ref=f10e89]:
+                - term [ref=f10e90]: Batch Number
+                - definition [ref=f10e91]: TR786PAOS
+              - generic [ref=f10e92]:
+                - term [ref=f10e93]: Fill Volume
+                - definition [ref=f10e94]: 3 mL
+              - generic [ref=f10e95]:
+                - term [ref=f10e96]: Purity
+                - definition [ref=f10e97]: 99.85%
+            - table [ref=f10e99]:
+              - rowgroup [ref=f10e100]:
+                - row [ref=f10e101]:
+                  - columnheader "Compound" [ref=f10e102]
+                  - columnheader "Concentration" [ref=f10e103]
+                  - columnheader "Verified Content" [ref=f10e104]
+              - rowgroup [ref=f10e105]:
+                - row [ref=f10e106]:
+                  - cell "Tirzepatide" [ref=f10e107]
+                  - cell "13.35 mg/mL" [ref=f10e108]
+                  - cell "40.05 mg" [ref=f10e109]
+            - paragraph [ref=f10e110]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+          - generic [ref=f10e111]:
+            - tablist "Product details" [ref=f10e112]:
+              - tab "Package Contents" [selected] [ref=f10e113]
+              - tab "Storage Logic" [ref=f10e114]
+              - tab "Supply Chain" [ref=f10e115]
+            - tabpanel [ref=f10e116]:
+              - listitem [ref=f10e117]: Pre-filled Research pen (40mg Tirzepatide)
+              - listitem [ref=f10e118]: Research information sheet
+          - generic [ref=f10e119]:
+            - generic [ref=f10e120]:
+              - term [ref=f10e121]: Purity
+              - definition [ref=f10e122]: ≥99% HPLC
+            - generic [ref=f10e123]:
+              - term [ref=f10e124]: Form
+              - definition [ref=f10e125]: Pre-filled research pen
+            - generic [ref=f10e126]:
+              - term [ref=f10e127]: Dose
+              - definition [ref=f10e128]: 40 mg total
+            - generic [ref=f10e129]:
+              - term [ref=f10e130]: Storage
+              - definition [ref=f10e131]: 2–8°C, do not freeze
+          - generic [ref=f10e132]:
+            - group "Quantity" [ref=f10e133]:
+              - button "Decrease quantity" [ref=f10e134]: −
+              - generic [ref=f10e135]: "1"
+              - button "Increase quantity" [ref=f10e136]: +
+            - button "Add to cart" [ref=f10e137]
+      - generic [ref=f10e139]:
+        - generic [ref=f10e140]:
+          - generic [ref=f10e141]: Related
+          - heading "You might also need" [level=2] [ref=f10e142]
+        - generic [ref=f10e143]:
+          - link "Retatrutide 20mg Compound Analysis Retatrutide 20mg $350 View" [ref=f10e144]:
+            - /url: "#/product/p1"
+            - img "Retatrutide 20mg" [ref=f10e146]
+            - generic [ref=f10e147]:
+              - generic [ref=f10e148]: Compound Analysis
+              - heading "Retatrutide 20mg" [level=3] [ref=f10e149]
+              - generic [ref=f10e150]:
+                - generic [ref=f10e151]: $350
+                - generic [ref=f10e152]: View
+          - link "Glow 70mg Compound Analysis Glow 70mg $329 View" [ref=f10e153]:
+            - /url: "#/product/p2"
+            - img "Glow 70mg" [ref=f10e155]
+            - generic [ref=f10e156]:
+              - generic [ref=f10e157]: Compound Analysis
+              - heading "Glow 70mg" [level=3] [ref=f10e158]
+              - generic [ref=f10e159]:
+                - generic [ref=f10e160]: $329
+                - generic [ref=f10e161]: View
+          - link "BPC-157 & TB-500 40mg Compound Analysis BPC-157 & TB-500 40mg $269 View" [ref=f10e162]:
+            - /url: "#/product/p3"
+            - img "BPC-157 & TB-500 40mg" [ref=f10e164]
+            - generic [ref=f10e165]:
+              - generic [ref=f10e166]: Compound Analysis
+              - heading "BPC-157 & TB-500 40mg" [level=3] [ref=f10e167]
+              - generic [ref=f10e168]:
+                - generic [ref=f10e169]: $269
+                - generic [ref=f10e170]: View
+  - contentinfo [ref=f10e171]:
+    - generic [ref=f10e172]:
+      - generic [ref=f10e173]:
+        - generic [ref=f10e174]:
+          - generic [ref=f10e175]:
+            - generic [ref=f10e176]: Liora
+            - generic [ref=f10e177]: Healthcare
+          - paragraph [ref=f10e178]: Research-grade peptide supply
+          - generic [ref=f10e179]:
+            - heading "Stay updated" [level=4] [ref=f10e180]
+            - generic [ref=f10e181]:
+              - textbox "Email address" [ref=f10e182]:
+                - /placeholder: you@lab.com
+              - textbox
+              - button "Subscribe" [ref=f10e183]
+            - paragraph [ref=f10e184]: Research updates and restock alerts. No spam.
+        - generic [ref=f10e185]:
+          - heading "Quick Links" [level=4] [ref=f10e186]
+          - list [ref=f10e187]:
+            - listitem [ref=f10e188]:
+              - link "Home" [ref=f10e189] [cursor=pointer]:
+                - /url: "#home"
+            - listitem [ref=f10e190]:
+              - link "About" [ref=f10e191] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f10e192]:
+              - link "Products" [ref=f10e193] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=f10e194]:
+              - link "Why Us" [ref=f10e195] [cursor=pointer]:
+                - /url: "#why-us"
+            - listitem [ref=f10e196]:
+              - link "FAQ" [ref=f10e197] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f10e198]:
+              - link "Contact" [ref=f10e199] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f10e200]:
+              - link "Track order" [ref=f10e201] [cursor=pointer]:
+                - /url: "#/track"
+        - generic [ref=f10e202]:
+          - heading "Contact" [level=4] [ref=f10e203]
+          - list [ref=f10e204]:
+            - listitem [ref=f10e205]:
+              - link "hello@liorahealthcare.com" [ref=f10e206] [cursor=pointer]:
+                - /url: mailto:hello@liorahealthcare.com
+            - listitem [ref=f10e207]:
+              - link "+971 50 000 0000" [ref=f10e208] [cursor=pointer]:
+                - /url: https://wa.me/971500000000
+            - listitem [ref=f10e209]:
+              - generic [ref=f10e210]: Dubai · United Arab Emirates
+        - generic [ref=f10e211]:
+          - heading "Follow" [level=4] [ref=f10e212]
+          - list [ref=f10e213]:
+            - listitem [ref=f10e214]:
+              - link "WhatsApp" [ref=f10e215]:
+                - /url: https://wa.me/971500000000
+            - listitem [ref=f10e216]:
+              - link "Instagram" [ref=f10e217]:
+                - /url: https://instagram.com/liorahealthcare
+            - listitem [ref=f10e218]:
+              - link "Email" [ref=f10e219]:
+                - /url: mailto:hello@liorahealthcare.com
+      - generic [ref=f10e221]:
+        - generic [ref=f10e222]: © 2026 Liora Healthcare
+        - generic [ref=f10e223]: Dubai · United Arab Emirates
+      - paragraph [ref=f10e224]: All products are supplied strictly for laboratory research and educational use. Not intended for human or veterinary consumption. Buyer is responsible for ensuring compliance with all applicable local laws and regulations.
+      - generic [ref=f10e225]: Liora Healthcare
+  - generic:
+    - button
+    - dialog:
+      - banner:
+        - generic:
+          - text: Your cart
+          - heading [level=2]: 0 items
+        - button: ×
+      - generic:
+        - generic: ◌
+        - paragraph: Your cart is empty.
+        - button: Browse catalogue

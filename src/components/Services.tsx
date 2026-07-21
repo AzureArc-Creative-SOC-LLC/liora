@@ -38,8 +38,8 @@ export function Services() {
         </div>
         <p className="lead">
           Four standards we hold ourselves to on every order — the same whether
-          you're a postdoc reordering a single vial or a lab provisioning a
-          year of research.
+          you're a postdoc reordering a single research kit or a lab
+          provisioning a year of research.
         </p>
       </div>
 

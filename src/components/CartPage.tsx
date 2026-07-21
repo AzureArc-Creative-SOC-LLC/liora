@@ -134,12 +134,6 @@ export function CartPage() {
               <dt>Subtotal</dt>
               <dd>{formatUsd(subtotal)}</dd>
             </div>
-            <div>
-              <dt>
-                Shipping <span className="mono">Discreet dispatch</span>
-              </dt>
-              <dd>Free</dd>
-            </div>
             <div className="cart-page__summary-total">
               <dt>Total</dt>
               <dd>{formatUsd(subtotal)}</dd>
